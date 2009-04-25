@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: add custom stations
+desc: Read ~/.jamirdochegalrc after the fixed station list.  Add a command to remove an unwanted entry from the fixed station list.
+type: :feature
+component: jamirdochegal
+release: 
+reporter: Christian Garbs <mitch@cgarbs.de>
+status: :unstarted
+disposition: 
+creation_time: 2009-04-25 15:47:45.614168 Z
+references: []
+
+id: 94e7bbf4f42a04c2c53e0bad20157624b6b1af45
+log_events: 
+- - 2009-04-25 15:47:51.697640 Z
+  - Christian Garbs <mitch@cgarbs.de>
+  - created
+  - ""
