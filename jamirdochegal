@@ -147,6 +147,7 @@ unless (exists $station{$action}) {
     }
     $action = $matches[0];
 }
+print "\n>>>> $station{$action}->{NAME}\n\n";
 my $url = $station{$action}->{URL};
 my @parms = ( '-cache', '128' );
 push @parms, '-playlist' unless $url =~ s/^DIRECT://;
