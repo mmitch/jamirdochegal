@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: add manpage
+desc: use perldoc to create a manpage (also to document the code?)
+type: :feature
+component: jamirdochegal
+release: 
+reporter: Christian Garbs <mitch@cgarbs.de>
+status: :unstarted
+disposition: 
+creation_time: 2009-04-26 09:36:40.993512 Z
+references: []
+
+id: 3774c199af2c1b26d85de768366fa48a2e8ee0fd
+log_events: 
+- - 2009-04-26 09:36:41.659285 Z
+  - Christian Garbs <mitch@cgarbs.de>
+  - created
+  - ""
