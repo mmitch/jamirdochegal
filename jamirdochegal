@@ -22,32 +22,62 @@ use strict;
 use warnings;
 
 
-#### read stations
+#### process a line from the stations list
 my %station;
-while (my $line = <DATA>) {
+sub process_station_line($)
+{
+    my $line = shift;
 
     chomp $line;
-    next if $line =~ /^\s+$/;
-    next if $line =~ /^\s*#/;
+    return if $line =~ /^\s*$/;
+    return if $line =~ /^\s*#/;
 
-    if ($line =~ /^\s*(\S+)\|(.*)\s+(\S+)\s*$/) {
+    if ($line =~ /^\s*DELETE:(\S+)\s*$/) {
+	return "can't delete unkown station `$1'" unless exists $station{$1};
+	delete $station{$1};
+
+    } elsif ($line =~ /^\s*RENAME:(\S+)\s(\S+)*$/) {
+	return "can't rename unkown station `$1'" unless exists $station{$1};
+	$station{$2} = $station{$1};
+	$station{$2}->{'SHORTCUT'} = $2;
+	delete $station{$1};
+
+    } elsif ($line =~ /^\s*(\S+)\|(.*)\s+(\S+)\s*$/) {
 	$station{$1} = {
 	    'SHORTCUT' => $1,
 	    'NAME'     => $2,
 	    'URL'      => $3,
-	};
+	}
 
     } elsif ($line =~ /^\s*(.*)\s+(\S+)\s*$/) {
 	$station{$1} = {
 	    'SHORTCUT' => $1,
 	    'NAME'     => $1,
 	    'URL'      => $2,
-	};
+	}
 	
     } else {
-	warn "broken station in line $.\n";
+	return "broken line";
     }
+    return "";
+}
 
+#### read global stations
+while (my $line = <DATA>) {
+    my $err = process_station_line($line);
+    warn "global configuration [$.]: $err\n" if $err;
+}
+
+
+#### read local stations
+my $rcfile = $ENV{HOME}.'/.jamirdochegalrc';
+if ( -e $rcfile ) {
+    open RCFILE, '<', $rcfile or warn "can't open `$rcfile': $!\n";
+    while (my $line = <RCFILE>) {
+	my $err = process_station_line($line);
+	warn "local configuration [$.]: $err\n" if $err;
+    }
+    close RCFILE or warn "can't open `$rcfile': $!\n";
 }
 
 
@@ -127,11 +157,16 @@ exec 'mplayer', @parms, $url, @ARGV;
 
 
 #### the station list
-# format:
+# - define stations:
 #   <name> <url>
-# or
 #   <shortcut>|<name> <url>
-# where <url> is a playlist (otherwise prepend with 'DIRECT:')
+#   where <url> is a playlist (otherwise prepend with 'DIRECT:')
+# - delete stations:
+#   DELETE:<name>
+#   DELETE:<shortcut>
+# - rename stations:
+#   RENAME:<name> <shortcut>
+#   RENAME:<shortcut> <shortcut>
 __DATA__
 cryosleep http://207.200.96.225:8022/listen.pls
 bitjam http://hangar18.gotdns.org:8086/bitjam.ogg.m3u
