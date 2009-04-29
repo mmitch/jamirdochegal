@@ -173,6 +173,7 @@ cryosleep http://207.200.96.225:8022/listen.pls
 bitjam http://hangar18.gotdns.org:8086/bitjam.ogg.m3u
 cpc|cpc scene http://radio.cpcscene.com/cpcsceneradio.pls
 demovibes http://demovibes.de:8000/necta192.mp3.m3u
+dlf|deutschlandfunk http://www.dradio.de/streaming/dlf_hq_ogg.m3u
 hardrave.jp http://hardrave.jp:9000/listen.pls
 kohina http://relay.radio.ethz.ch:8000/kohina.ogg.m3u
 nsw-anime DIRECT:http://217.115.150.152:8000/
