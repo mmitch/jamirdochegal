@@ -170,17 +170,18 @@ exec 'mplayer', @parms, $url, @ARGV;
 #   RENAME:<shortcut> <shortcut>
 __DATA__
 bitjam http://hangar18.gotdns.org:8086/bitjam.ogg.m3u
-cpc|cpc scene http://radio.cpcscene.com/cpcsceneradio.pls
 demovibes http://demovibes.de:8000/necta192.mp3.m3u
 dlf|deutschlandfunk http://www.dradio.de/streaming/dlf_hq_ogg.m3u
 hardrave.jp http://hardrave.jp:9000/listen.pls
 kohina http://relay.radio.ethz.ch:8000/kohina.ogg.m3u
 nsw-anime DIRECT:http://217.115.150.152:8000/
 ocremix|ormgas http://ormgas.rainwave.cc/tunein-oc.php?relay=se
-sid|sid station http://66.90.103.253/spanel/castcontrol/playlist.php?id=209
+sid|sid station http://sc1uk.myshoutserver.com/tunein.php/drbongo/playlist.pls
 slayradio http://www.slayradio.org/tune_in.php/128kbps/listen.m3u
 ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
-sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.asx
+sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/Ogg-hd.m3u
 vgamp http://vgamp.com/listen128.pls
 # needs authentication:
 # cryosleep http://207.200.96.225:8022/listen.pls
+# b0rken/recheck URL:
+# cpc|cpc scene http://radio.cpcscene.com/cpcsceneradio.pls
