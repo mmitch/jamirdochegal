@@ -172,6 +172,7 @@ __DATA__
 bitjam http://hangar18.gotdns.org:8086/bitjam.ogg.m3u
 demovibes http://demovibes.de:8000/necta192.mp3.m3u
 dlf|deutschlandfunk http://www.dradio.de/streaming/dlf_hq_ogg.m3u
+dradio DIRECT:http://dradio.ic.llnwd.net/stream/dradio_dwissen_m_a.ogg
 hardrave.jp http://hardrave.jp:9000/listen.pls
 kohina http://relay.radio.ethz.ch:8000/kohina.ogg.m3u
 nsw-anime DIRECT:http://217.115.150.152:8000/
