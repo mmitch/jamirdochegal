@@ -181,7 +181,7 @@ slayradio http://www.slayradio.org/tune_in.php/128kbps/listen.m3u
 ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
 sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/wmp-hd.asx
 subpop DIRECT:http://pushnpop.net:8912/subpop.ogg
-tbfm|TranceBase.FM http://listen.trancebase.fm/oggvorbis.pls
+tbfm|TranceBase.FM http://listen.trancebase.fm/aacplus.pls
 ttfm|Trance.Techno.FM http://trance.techno.fm
 # needs authentication:
 # cryosleep http://207.200.96.225:8022/listen.pls
