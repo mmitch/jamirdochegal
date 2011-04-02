@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #
 # jamirdochegal  -  listen to web radios via mplayer 
-# Copyright (C) 2009  Christian Garbs <mitch@cgarbs.de>
+# Copyright (C) 2009-2011  Christian Garbs <mitch@cgarbs.de>
 # licensed under GNU GPL v2 (or later)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -170,22 +170,25 @@ exec 'mplayer', @parms, $url, @ARGV;
 #   RENAME:<shortcut> <shortcut>
 __DATA__
 bitjam http://195.24.224.77:8086/bitjam.ogg.m3u
+cryosleep http://207.200.96.225:8022/listen.pls
 demovibes http://demovibes.de:8000/necta192.mp3.m3u 
+di-classic http://www.di.fm/mp3/classictechno.pls
 dlf|deutschlandfunk http://www.dradio.de/streaming/dlf_hq_ogg.m3u
 dradio DIRECT:http://dradio.ic.llnwd.net/stream/dradio_dwissen_m_a.ogg
 kohina http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
 nsw-anime DIRECT:http://listen.nsw-anime.de/
 ocremix|ormgas http://ormgas.rainwave.cc/tunein-rw.php
 r7|radioseven http://www.radioseven.se/128.pls
-sid|sid station http://sc1uk.myshoutserver.com/tunein.php/drbongo/playlist.pls
-slayradio http://www.slayradio.org/tune_in.php/128kbps/listen.m3u
+rivendell http://www.radiorivendell.com/lib/blocks/rr_play.php?play_f=play&bitrate=128&codec=mp3&player=Winamp
+sid|sid station http://cast6.serverhostingcenter.com/tunein.php/jotaylor/playlist.pls
+slay|slayradio http://www.slayradio.org/tune_in.php/128kbps/listen.m3u
+sa|soma-secretagent http://somafm.com/startstream=secretagent.pls
+ip|soma-indiepop http://somafm.com/startstream=indiepop.pls
+mc|soma-missioncontrol http://somafm.com/startstream=missioncontrol.pls
 ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
-sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/wmp-hd.asx
+sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.asx
 subpop DIRECT:http://pushnpop.net:8912/subpop.ogg
 tbfm|TranceBase.FM http://listen.trancebase.fm/aacplus.pls
 ttfm|Trance.Techno.FM http://trance.techno.fm
-# needs authentication:
-# cryosleep http://207.200.96.225:8022/listen.pls
-# b0rken/recheck URL:
 # hardrave.jp http://hardrave.jp:9000/listen.pls
 # vgamp http://vgamp.com/listen128.pls
