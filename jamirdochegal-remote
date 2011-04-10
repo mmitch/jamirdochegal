@@ -1,0 +1,132 @@
+#!/usr/bin/perl
+#
+# jamirdochegal-remote  -  simple HTTP frontend to jamirdochegal
+# Copyright (C) 2011  Christian Garbs <mitch@cgarbs.de>
+# licensed under GNU GPL v2 (or later)
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+use strict;
+use warnings;
+
+{
+    package JamirdochegalRemoteWebServer;
+
+    use HTTP::Server::Simple::CGI;
+    use base qw(HTTP::Server::Simple::CGI);
+
+    my %dispatch = (
+	'start' => \&do_start,
+	'stop'  => \&do_stop,
+	'tune'  => \&do_tune,
+	''      => \&do_nothing,
+        );
+
+    sub get_action {
+	my $cgi = shift;
+
+	my @path = split '/', $cgi->path_info();
+	return $path[1] if defined $path[1];
+	return '';
+    }
+	
+    sub get_parm {
+	my $cgi = shift;
+
+	my @path = split '/', $cgi->path_info();
+	return $path[2] if defined $path[2];
+	return '';
+    }
+
+    sub handle_request {
+	my $self = shift;
+	my $cgi  = shift;
+
+	my $handler = $dispatch{ get_action($cgi) };
+
+	if (ref($handler) eq "CODE") {
+	    print "HTTP/1.0 200 OK\r\n";
+	    $handler->($cgi);
+	    print_interface($cgi);
+
+	} else {
+	    print "HTTP/1.0 404 Not found\r\n";
+	    print $cgi->header,
+	    $cgi->start_html('Not found'),
+	    $cgi->h1('Not found'),
+	    $cgi->end_html;
+	}
+    }
+
+    sub do_nothing {
+	my $cgi = shift;
+
+    }
+
+    sub do_start {
+	my $cgi = shift;
+
+	do_stop($cgi);
+	system('jamirdochegal -r &');
+    }
+
+    sub do_tune {
+	my $cgi = shift;
+
+	do_stop($cgi);
+	system('jamirdochegal '.get_parm($cgi).' &');
+    }
+
+    sub do_stop {
+	my $cgi = shift;
+
+	system('killall', 'mplayer');
+    }
+
+    sub print_interface {
+	my $cgi  = shift;   # CGI.pm object
+	return if !ref $cgi;
+
+	print $cgi->header;
+	print $cgi->start_html('jamirdochegal remote');
+	print $cgi->p(
+	    $cgi->a({href=>"/start"},'start/random'),
+	    ' : ',
+	    $cgi->a({href=>"/stop" },'stop' )
+	    );
+
+	if (open STATIONS, "jamirdochegal -l |") {
+	    my $items = '';
+	    while (my $line = <STATIONS>) {
+		chomp $line;
+		$line =~ /^(\S+)/;
+		my $station = $1;
+		$items .= $cgi->li( $cgi->a({href=>"/tune/$1"}, $line) );
+	    }
+	    close STATIONS or warn "can't close `jamirdochegal -l |': $!";
+	    print $cgi->ul( $items );
+	} else {
+	    warn "can't open `jamirdochegal -l |': $!";
+	}
+
+	print $cgi->p(
+	    $cgi->small('jamirdochegal remote')
+	    );
+	print $cgi->end_html;
+    }
+
+}
+
+# start the server
+JamirdochegalRemoteWebServer->new(1234)->run();
