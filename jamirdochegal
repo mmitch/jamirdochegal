@@ -171,7 +171,7 @@ exec 'mplayer', @parms, $url, @ARGV;
 __DATA__
 bitjam http://195.24.224.77:8086/bitjam.ogg.m3u
 cryosleep http://207.200.96.225:8022/listen.pls
-demovibes http://demovibes.de:8000/necta192.mp3.m3u 
+demovibes http://demovibes.de:8000/necta192.mp3.m3u
 di-classic http://www.di.fm/mp3/classictechno.pls
 dlf|deutschlandfunk http://www.dradio.de/streaming/dlf_hq_ogg.m3u
 dradio DIRECT:http://dradio.ic.llnwd.net/stream/dradio_dwissen_m_a.ogg
@@ -190,6 +190,7 @@ ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=
 sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.asx
 subpop DIRECT:http://pushnpop.net:8912/subpop.ogg
 tbfm|TranceBase.FM http://listen.trancebase.fm/aacplus.pls
+tt24|Turntables24.com http://stream.turntables24.de:9200/listen.pls
 ttfm|Trance.Techno.FM http://trance.techno.fm
 # hardrave.jp http://hardrave.jp:9000/listen.pls
 # vgamp http://vgamp.com/listen128.pls
