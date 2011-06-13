@@ -186,6 +186,7 @@ slay|slayradio http://www.slayradio.org/tune_in.php/128kbps/listen.m3u
 sa|soma-secretagent http://somafm.com/startstream=secretagent.pls
 ip|soma-indiepop http://somafm.com/startstream=indiepop.pls
 mc|soma-missioncontrol http://somafm.com/startstream=missioncontrol.pls
+phish|live Phish radio http://www.livephish.com/radio/listen.m3u
 ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
 sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.asx
 subpop DIRECT:http://pushnpop.net:8912/subpop.ogg
