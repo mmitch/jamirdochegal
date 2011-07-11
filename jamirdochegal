@@ -170,6 +170,7 @@ exec 'mplayer', @parms, $url, @ARGV;
 #   RENAME:<shortcut> <shortcut>
 __DATA__
 bitjam http://195.24.224.77:8086/bitjam.ogg.m3u
+bdr|braindamageradio http://www.braindamageradio.com/stream/bdr-winamp.pls
 cryosleep http://207.200.96.225:8022/listen.pls
 demovibes http://demovibes.de:8000/necta192.mp3.m3u 
 di-classic http://www.di.fm/mp3/classictechno.pls
