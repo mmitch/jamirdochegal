@@ -187,7 +187,7 @@ dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
 dradio OGGDEMUX:DIRECT:http://dradio.ic.llnwd.net/stream/dradio_dwissen_m_a.ogg
 kohina OGGDEMUX:http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
 nsw-anime DIRECT:http://listen.nsw-anime.de/
-nubreaks http://www.nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=server4.myshoutcast.de&port=9004&format=PLS
+nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
 ocremix|ormgas http://ormgas.rainwave.cc/tunein.php
 r7|radioseven http://www.radioseven.se/128.pls
 rivendell http://www.radiorivendell.com/lib/blocks/rr_play.php?play_f=play&bitrate=128&codec=mp3&player=Winamp
