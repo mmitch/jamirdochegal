@@ -149,9 +149,14 @@ unless (exists $station{$action}) {
 }
 print "\n>>>> $station{$action}->{NAME}\n\n";
 my $url = $station{$action}->{URL};
-my @parms = ( '-cache', '128' );
-push @parms, '-playlist' unless $url =~ s/^DIRECT://;
 
+my %flag;
+while ($url =~ s/^([A-Z]+)://g) {
+    $flag{$1}++;
+}
+
+my @parms = ( '-cache', '128' );
+push @parms, '-playlist' unless $flag{DIRECT};
 
 #### and play
 exec 'mplayer', @parms, $url, @ARGV;
