@@ -156,6 +156,7 @@ while ($url =~ s/^([A-Z]+)://g) {
 }
 
 my @parms = ( '-cache', '128' );
+push @parms, ('-demuxer', 'ogg') if exists $flag{OGGDEMUX};
 push @parms, '-playlist' unless $flag{DIRECT};
 
 #### and play
@@ -164,9 +165,11 @@ exec 'mplayer', @parms, $url, @ARGV;
 
 #### the station list
 # - define stations:
-#   <name> <url>
-#   <shortcut>|<name> <url>
-#   where <url> is a playlist (otherwise prepend with 'DIRECT:')
+#   [<shortcut>|]<name> [<flag>]<url>
+#   where <url> is a playlist
+#   <flag> is optional an can be one or more of:
+#   DIRECT:    when <url> is no playlist but a direct stream
+#   OGGDEMUX:  work around mplayer/lavf-demuxer problems with OGG streams
 # - delete stations:
 #   DELETE:<name>
 #   DELETE:<shortcut>
@@ -175,14 +178,14 @@ exec 'mplayer', @parms, $url, @ARGV;
 #   RENAME:<shortcut> <shortcut>
 __DATA__
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
-bitjam http://195.24.224.77:8086/bitjam.ogg.m3u
+bitjam OGGDEMUX:http://195.24.224.77:8086/bitjam.ogg.m3u
 bdr|braindamageradio http://www.braindamageradio.com/stream/bdr-winamp.pls
 cryosleep http://207.200.96.225:8022/listen.pls
 demovibes http://demovibes.de:8000/necta192.mp3.m3u
 di-classic http://www.di.fm/mp3/classictechno.pls
-dlf|deutschlandfunk http://www.dradio.de/streaming/dlf_hq_ogg.m3u
-dradio DIRECT:http://dradio.ic.llnwd.net/stream/dradio_dwissen_m_a.ogg
-kohina http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
+dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
+dradio OGGDEMUX:DIRECT:http://dradio.ic.llnwd.net/stream/dradio_dwissen_m_a.ogg
+kohina OGGDEMUX:http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
 nsw-anime DIRECT:http://listen.nsw-anime.de/
 nubreaks http://www.nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=server4.myshoutcast.de&port=9004&format=PLS
 ocremix|ormgas http://ormgas.rainwave.cc/tunein.php
@@ -196,7 +199,7 @@ mc|soma-missioncontrol http://somafm.com/startstream=missioncontrol.pls
 phish|live Phish radio http://www.livephish.com/radio/listen.m3u
 ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
 sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.asx
-subpop DIRECT:http://pushnpop.net:8912/subpop.ogg
+subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
 tbfm|TranceBase.FM http://listen.trancebase.fm/aacplus.pls
 tt24|Turntables24.com http://stream.turntables24.de:9200/listen.pls
 ttfm|Trance.Techno.FM http://trance.techno.fm
