@@ -42,19 +42,21 @@ sub process_station_line($)
 	$station{$2}->{'SHORTCUT'} = $2;
 	delete $station{$1};
 
-    } elsif ($line =~ /^\s*(\S+)\|(.*)\s+(\S+)\s*$/) {
-	$station{$1} = {
-	    'SHORTCUT' => $1,
-	    'NAME'     => $2,
-	    'URL'      => $3,
+    } elsif ($line =~ /^(?:\s*(\S+)\|)?(.*)\s+(\S+)\s*$/) {
+	my ($shortcut, $name, $url, $flags) = ($1, $2, $3, {});
+
+	$shortcut = $name unless defined $shortcut;
+
+	while ($url =~ s/^([A-Z]+)://g) {
+	    $flags->{$1}++;
 	}
 
-    } elsif ($line =~ /^\s*(.*)\s+(\S+)\s*$/) {
-	$station{$1} = {
-	    'SHORTCUT' => $1,
-	    'NAME'     => $1,
-	    'URL'      => $2,
-	}
+	$station{$shortcut} = {
+	    'SHORTCUT' => $shortcut,
+	    'NAME'     => $name,
+	    'URL'      => $url,
+	    'FLAGS'    => $flags,
+	};
 	
     } else {
 	return "broken line";
@@ -148,19 +150,12 @@ unless (exists $station{$action}) {
     $action = $matches[0];
 }
 print "\n>>>> $station{$action}->{NAME}\n\n";
-my $url = $station{$action}->{URL};
-
-my %flag;
-while ($url =~ s/^([A-Z]+)://g) {
-    $flag{$1}++;
-}
-
 my @parms = ( '-cache', '128' );
-push @parms, ('-demuxer', 'ogg') if exists $flag{OGGDEMUX};
-push @parms, '-playlist' unless $flag{DIRECT};
+push @parms, ('-demuxer', 'ogg') if exists $station{$action}->{FLAGS}->{OGGDEMUX};
+push @parms, '-playlist' unless exists $station{$action}->{FLAGS}->{DIRECT};
 
 #### and play
-exec 'mplayer', @parms, $url, @ARGV;
+exec 'mplayer', @parms, $station{$action}->{URL}, @ARGV;
 
 
 #### the station list
