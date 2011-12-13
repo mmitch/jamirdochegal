@@ -188,9 +188,26 @@ r7|radioseven http://www.radioseven.se/128.pls
 rivendell http://www.radiorivendell.com/lib/blocks/rr_play.php?play_f=play&bitrate=128&codec=mp3&player=Winamp
 sid|sid station http://cast6.serverhostingcenter.com/tunein.php/jotaylor/playlist.pls
 slay|slayradio http://www.slayradio.org/tune_in.php/128kbps/listen.m3u
-sa|soma-secretagent http://somafm.com/startstream=secretagent.pls
+soma-beatblender http://somafm.com/startstream=beatblender.pls
+soma-bootliquor http://somafm.com/startstream=bootliquor.pls
+soma-christmas http://somafm.com/startstream=christmas.pls
+soma-cliqhop http://somafm.com/startstream=cliqhop.pls
+soma-covers http://somafm.com/startstream=covers.pls
+soma-digitalis http://somafm.com/startstream=digitalis.pls
+soma-doomed http://somafm.com/startstream=doomed.pls
+soma-dronezone http://somafm.com/startstream=dronezone.pls
+soma-groovesalad http://somafm.com/startstream=groovesalad.pls
+soma-illstreet http://somafm.com/startstream=illstreet.pls
 ip|soma-indiepop http://somafm.com/startstream=indiepop.pls
+soma-lush http://somafm.com/startstream=lush.pls
 mc|soma-missioncontrol http://somafm.com/startstream=missioncontrol.pls
+soma-poptron http://somafm.com/startstream=poptron.pls
+sa|soma-secretagent http://somafm.com/startstream=secretagent.pls
+soma-sonicuniverse http://somafm.com/startstream=sonicuniverse.pls
+soma-suburbsofgoa http://somafm.com/startstream=suburbsofgoa.pls
+soma-tags http://somafm.com/startstream=tags.pls
+soma-u80s http://somafm.com/startstream=u80s.pls
+soma-xmasinfrisco http://somafm.com/startstream=xmasinfrisco.pls
 phish|live Phish radio http://www.livephish.com/radio/listen.m3u
 ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
 sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.asx
@@ -198,5 +215,6 @@ subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
 tbfm|TranceBase.FM http://listen.trancebase.fm/aacplus.pls
 tt24|Turntables24.com http://stream.turntables24.de:9200/listen.pls
 ttfm|Trance.Techno.FM http://trance.techno.fm
+
 # hardrave.jp http://hardrave.jp:9000/listen.pls
 # vgamp http://vgamp.com/listen128.pls
