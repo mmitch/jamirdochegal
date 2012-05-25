@@ -186,7 +186,7 @@ nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.17
 ocremix|ormgas http://ormgas.rainwave.cc/tunein.php
 r7|radioseven http://www.radioseven.se/128.pls
 rivendell http://www.radiorivendell.com/lib/blocks/rr_play.php?play_f=play&bitrate=128&codec=mp3&player=Winamp
-sid|sid station http://cast6.serverhostingcenter.com/tunein.php/jotaylor/playlist.pls
+sid|sid station http://174.142.192.209/castcontrol/playlist.php?id=263
 slay|slayradio http://www.slayradio.org/tune_in.php/128kbps/listen.m3u
 soma-beatblender http://somafm.com/startstream=beatblender.pls
 soma-bootliquor http://somafm.com/startstream=bootliquor.pls
