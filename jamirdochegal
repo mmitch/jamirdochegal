@@ -179,7 +179,7 @@ cryosleep http://207.200.96.225:8022/listen.pls
 demovibes http://demovibes.de:8000/necta192.mp3.m3u
 di-classic http://www.di.fm/mp3/classictechno.pls
 dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
-dradio OGGDEMUX:DIRECT:http://dradio.ic.llnwd.net/stream/dradio_dwissen_m_a.ogg
+dradiowissen OGGDEMUX:http://www.dradio.de/streaming/dradiowissen_hq_ogg.m3u
 klassiklounge DIRECT:http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradiolounge128/livestream.mp3
 klassikmovie DIRECT:http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradiomovie128/livestream.mp3
 klassikopera DIRECT:http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradioopera128/livestream.mp3
