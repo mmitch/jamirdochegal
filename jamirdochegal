@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 #
 # jamirdochegal  -  listen to web radios via mplayer 
-# Copyright (C) 2009-2011  Christian Garbs <mitch@cgarbs.de>
-# licensed under GNU GPL v2 (or later)
+# Copyright (C) 2009-2013  Christian Garbs <mitch@cgarbs.de>
+# Licensed under GNU GPL v2 (or later)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -96,14 +96,18 @@ my $action = shift @ARGV;
 #### print help?
 if ($action eq '-h') {
     print << "EOF" ;
+
 jamirdochegal  -  listen to web radios via mplayer 
+Copyright (C) 2009-2013  Christian Garbs <mitch\@cgarbs.de>
+Licensed under GNU GPL v2 (or later)
 
 usage:
   jamirdochegal [-h | -l | -r | <station> [<additional-mplayer-arguments>]]
--h   print this help
--l   list all stations
--r   tune into a random station
-default with no arguments given is -r
+
+  -h   print this help
+  -l   list all stations
+  -r   tune into a random station (default with no arguments given)
+
 EOF
     ;
     exit 0;
