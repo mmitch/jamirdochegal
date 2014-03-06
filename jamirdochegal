@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #
 # jamirdochegal  -  listen to web radios via mplayer 
-# Copyright (C) 2009-2013  Christian Garbs <mitch@cgarbs.de>
+# Copyright (C) 2009-2014  Christian Garbs <mitch@cgarbs.de>
 # Licensed under GNU GPL v2 (or later)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -199,7 +199,7 @@ soma-cliqhop http://somafm.com/startstream=cliqhop.pls
 soma-covers http://somafm.com/startstream=covers.pls
 soma-digitalis http://somafm.com/startstream=digitalis.pls
 soma-doomed http://somafm.com/startstream=doomed.pls
-soma-dronezone http://somafm.com/startstream=dronezone.pls
+drone|soma-dronezone http://somafm.com/startstream=dronezone.pls
 soma-groovesalad http://somafm.com/startstream=groovesalad.pls
 soma-illstreet http://somafm.com/startstream=illstreet.pls
 ip|soma-indiepop http://somafm.com/startstream=indiepop.pls
