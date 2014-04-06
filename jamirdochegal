@@ -187,6 +187,7 @@ klassikmovie DIRECT:http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradiomo
 klassikopera DIRECT:http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradioopera128/livestream.mp3
 klassikradio DIRECT:http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradio128/livestream.mp3
 kohina OGGDEMUX:http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
+ndr2 http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u
 nsw-anime DIRECT:http://listen.nsw-anime.de/
 nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
 ocremix|ormgas http://ormgas.rainwave.cc/tunein.php
