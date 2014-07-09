@@ -215,7 +215,7 @@ soma-tags http://somafm.com/startstream=tags.pls
 soma-u80s http://somafm.com/startstream=u80s.pls
 #soma-xmasinfrisco http://somafm.com/startstream=xmasinfrisco.pls
 phish|live Phish radio http://www.livephish.com/radio/listen.m3u
-sst|streaming soundtracks http://loudcity.com/stations/streamingsoundtracks-com/files/show/aacplus-hi.asx
+sst|streaming soundtracks http://www.streamingsoundtracks.com/modules/Listen/MP3-hi.pls
 subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
 ctfm|ClubTime.FM http://listen.clubtime.fm/dsl.pls
 htfm|HouseTime.FM http://listen.housetime.fm/dsl.pls
