@@ -138,6 +138,10 @@ if ($action eq '-r') {
 unless (exists $station{$action}) {
     my @matches = grep { substr($_, 0, length $action) eq $action } sort keys %station;
     if (@matches == 0) {
+	# fallback: try full-text search on long station names
+	@matches = grep { index($station{$_}->{'NAME'}, $action) >= 0 } sort keys %station;
+    }
+    if (@matches == 0) {
 	die "unknown station `$action'\n";
     } elsif (@matches > 1) {
 	warn "inexact station name `$action'\n";
