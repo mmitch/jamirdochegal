@@ -199,7 +199,7 @@ rainwave http://all.rainwave.cc/tune_in/5.ogg
 ocremix http://ocr.rainwave.cc/tune_in/2.ogg
 r7|radioseven http://www.radioseven.se/128.pls
 slay|slayradio DIRECT:http://relay1.slayradio.org:8000/
-sid|sid station http://streams4.invertedhost.com:2199/tunein/jotayl01.pls
+sid|sid station http://eu2.reliastream.com:2199/tunein/jotayl00.pls
 soma-beatblender http://somafm.com/startstream=beatblender.pls
 soma-bootliquor http://somafm.com/startstream=bootliquor.pls
 soma-cliqhop http://somafm.com/startstream=cliqhop.pls
