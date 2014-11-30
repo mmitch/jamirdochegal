@@ -223,6 +223,7 @@ phish|live Phish radio http://www.livephish.com/radio/listen.m3u
 sst|streaming soundtracks http://www.streamingsoundtracks.com/modules/Listen/MP3-hi.pls
 subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
 ctfm|ClubTime.FM http://listen.clubtime.fm/dsl.pls
+wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
 htfm|HouseTime.FM http://listen.housetime.fm/dsl.pls
 tbfm|TranceBase.FM http://listen.trancebase.fm/dsl.pls
 tt24|Turntables24.com http://stream.turntables24.de:9200/listen.pls
