@@ -232,8 +232,8 @@ wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
 htfm|HouseTime.FM http://listen.housetime.fm/dsl.pls
 tbfm|TranceBase.FM http://listen.trancebase.fm/dsl.pls
 tt24|Turntables24.com http://stream.turntables24.de:9200/listen.pls
-ttfm|Trance.Techno.FM http://techno.fm/m3u/techno.mp3.m3u
-ltfm|Live.Techno.FM http://techno.fm/m3u/live.mp3.m3u
+ttfm|Techno.Techno.FM DIRECT:http://stream.techno.fm/techno.256k.mp3
+ltfm|Live.Techno.FM DIRECT:http://stream.techno.fm/live.256k.mp3
 
 # bitjam DIRECT:OGGDEMUX:http://88.80.10.21:8086/bitjam.ogg
 # cryosleep http://207.200.96.225:8022/listen.pls
