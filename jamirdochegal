@@ -200,25 +200,31 @@ ocremix http://ocr.rainwave.cc/tune_in/2.ogg
 r7|radioseven http://www.radioseven.se/128.pls
 slay|slayradio DIRECT:http://relay1.slayradio.org:8000/
 sid|sid station http://eu2.reliastream.com:2199/tunein/jotayl00.pls
+soma-70s http://somafm.com/seventies.pls
 soma-beatblender http://somafm.com/startstream=beatblender.pls
 soma-bootliquor http://somafm.com/startstream=bootliquor.pls
+soma-brfm http://somafm.com/brfm.pls
 soma-cliqhop http://somafm.com/startstream=cliqhop.pls
 soma-covers http://somafm.com/startstream=covers.pls
 soma-digitalis http://somafm.com/startstream=digitalis.pls
 soma-doomed http://somafm.com/startstream=doomed.pls
 drone|soma-dronezone http://somafm.com/startstream=dronezone.pls
+soma-fluid http://somafm.com/fluid.pls
 soma-groovesalad http://somafm.com/startstream=groovesalad.pls
 soma-illstreet http://somafm.com/startstream=illstreet.pls
 ip|soma-indiepop http://somafm.com/startstream=indiepop.pls
 soma-lush http://somafm.com/startstream=lush.pls
+soma-metal http://somafm.com/metal.pls
 mc|soma-missioncontrol http://somafm.com/startstream=missioncontrol.pls
 soma-poptron http://somafm.com/startstream=poptron.pls
 sa|soma-secretagent http://somafm.com/startstream=secretagent.pls
+soma-sf1033 http://somafm.com/sf1033.pls
 soma-sonicuniverse http://somafm.com/startstream=sonicuniverse.pls
 soma-suburbsofgoa http://somafm.com/startstream=suburbsofgoa.pls
 soma-tags http://somafm.com/startstream=tags.pls
+soma-thistle http://somafm.com/thistle.pls
 soma-u80s http://somafm.com/startstream=u80s.pls
-#soma-xmasinfrisco http://somafm.com/startstream=xmasinfrisco.pls
+soma-xmasinfrisco http://somafm.com/startstream=xmasinfrisco.pls
 phish|live Phish radio http://www.livephish.com/radio/listen.m3u
 sst|streaming soundtracks http://www.streamingsoundtracks.com/modules/Listen/MP3-hi.pls
 subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
