@@ -183,7 +183,6 @@ __DATA__
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
 dfmw|detektorfm-wort http://detektor.fm/detektor_fm-wort.m3u
 dfmm|detektorfm-musik http://detektor.fm/detektor_fm-musik.m3u
-di-classic http://www.di.fm/mp3/classictechno.pls
 dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
 dradiowissen OGGDEMUX:http://www.dradio.de/streaming/dradiowissen_hq_ogg.m3u
 klassiklounge DIRECT:http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradiolounge128/livestream.mp3
