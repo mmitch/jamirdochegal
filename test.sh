@@ -46,7 +46,7 @@ check_active()
     local HTTP_STATUS="$1" HTTP_TIME="$2"
     
     if [ -e $DIR/output ]; then
-	FILE_SIZE=$(stat -c %s )
+	FILE_SIZE=$(stat -c %s $DIR/output)
     else
 	FILE_SIZE=0
     fi
