@@ -43,7 +43,14 @@ check_active()
 
     rm -f $DIR/output
     set -- $(curl -o $DIR/output --location --silent --max-time 3 --write-out '%{http_code} %{time_pretransfer}' "$URL")
-    local HTTP_STATUS="$1" HTTP_TIME="$2" FILE_SIZE=$(stat -c %s $DIR/output)
+    local HTTP_STATUS="$1" HTTP_TIME="$2"
+    
+    if [ -e $DIR/output ]; then
+	FILE_SIZE=$(stat -c %s )
+    else
+	FILE_SIZE=0
+    fi
+
     # echo $HTTP_STATUS $HTTP_TIME $FILE_SIZE
 
     local ERROR
