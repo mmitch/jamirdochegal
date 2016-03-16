@@ -41,8 +41,10 @@ check_active()
     local NAME="$1" URL="$2"
     declare -g OK="$3" ERRORS="$4"
 
-    set -- $(curl -o /dev/null --location --silent --max-time 5 --write-out '%{http_code} %{time_pretransfer}' "$URL")
-    local HTTP_STATUS="$1" HTTP_TIME="$2"
+    rm -f $DIR/output
+    set -- $(curl -o $DIR/output --location --silent --max-time 3 --write-out '%{http_code} %{time_pretransfer}' "$URL")
+    local HTTP_STATUS="$1" HTTP_TIME="$2" FILE_SIZE=$(stat -c %s $DIR/output)
+    # echo $HTTP_STATUS $HTTP_TIME $FILE_SIZE
 
     local ERROR
     case "$HTTP_STATUS" in
@@ -52,8 +54,10 @@ check_active()
 
 	000)
 	    # no HTTP status - could be streaming mode or timeout
-	    # check connection time
+	    # check connection time and file size
 	    if [ $HTTP_TIME = "0,000" ]; then
+		ERROR=timeout
+	    elif [ $FILE_SIZE -eq 0 ]; then
 		ERROR=timeout
 	    else
 		ERROR=streaming
