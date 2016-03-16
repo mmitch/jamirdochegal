@@ -102,7 +102,7 @@ status 'checking active stations'
 OK=0
 ERRORS=0
 
-sed '1,/__DATA__/d;/^\s*#/d' jamirdochegal | grep http | head -1 | (
+sed '1,/__DATA__/d;/^\s*#/d' jamirdochegal | grep http | (
     while read NAME URL; do
 	URL="${URL/*http/http}"
 	check_active "$NAME" "$URL" "$OK" "$ERRORS"
@@ -124,7 +124,7 @@ status 'checking inactive stations'
 OK=0
 ERRORS=0
 
-sed '1,/__DATA__/d;/^\s*[^#]/d;s/^#\s*//' jamirdochegal | grep http | head -8 | (
+sed '1,/__DATA__/d;/^\s*[^#]/d;s/^#\s*//' jamirdochegal | grep http | (
     while read NAME URL; do
 	URL="${URL/*http/http}"
 	check_active "$NAME" "$URL" "$OK" "$ERRORS"
