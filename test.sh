@@ -96,6 +96,13 @@ check_active()
 
 #################################################################
 
+
+status 'checking jamirdochgal script syntax'
+jamirdochegal -l > $DIR/jamirdochegal_l_stdout 2> $DIR/jamirdochegal_l_stderr
+jamirdochegal -h > $DIR/jamirdochegal_h_stdout 2> $DIR/jamirdochegal_h_stderr
+printf "${BOLD}${GREEN}OK ${WHITE} : script looks good${RESET}\n"
+
+
 BROKEN=
 
 status 'checking active stations'
