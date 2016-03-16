@@ -111,7 +111,8 @@ ERRORS=0
 
 sed '1,/__DATA__/d;/^\s*#/d' jamirdochegal | grep http | (
     while read LINE; do
-	NAME="${LINE% http*}"
+	NAME="${LINE%http*}"
+	NAME="${NAME% *}"
 	URL="${LINE/*http/http}"
 	check_active "$NAME" "$URL" "$OK" "$ERRORS"
     done
