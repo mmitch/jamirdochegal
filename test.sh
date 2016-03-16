@@ -155,9 +155,9 @@ status 'removing temporary directory'
 rm -rf "$DIR"
 
 if [ $BROKEN ]; then
-    status 'successful exit'
-    exit 0
-else
-    status 'there were errors - unsuccessful exit'
+    status '${RED}there were errors - unsuccessful exit'
     exit 1
+else
+    status '${GREEN}successful exit'
+    exit 0
 fi
