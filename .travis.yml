@@ -1,2 +1,3 @@
+language: perl
 install: true
 script: git config --global user.name "TravisCI" && git config --global user.email "travisci@example.com" && ./test.sh
