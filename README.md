@@ -22,7 +22,7 @@ license
 -------
 
 jamirdochegal  -  listen to web radios via mplayer  
-Copyright (C) 2009-2014  Christian Garbs <mitch@cgarbs.de>  
+Copyright (C) 2009-2016  Christian Garbs <mitch@cgarbs.de>  
 Licensed under GNU GPL v2 (or later)  
 
 This program is free software: you can redistribute it and/or modify
