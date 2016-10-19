@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+if [ "$1" = '--offline' ]; then
+    ONLINE=no
+else
+    ONLINE=yes
+fi
+
 DIR=`mktemp -d --tmpdir jamirdochegal-unittest-XXXXXXXX`
 
 # setup colors
@@ -117,50 +123,59 @@ printf "${BOLD}${GREEN}OK ${WHITE} : script looks good${RESET}\n"
 BROKEN=
 
 status 'checking active stations'
-OK=0
-ERRORS=0
 
-sed '1,/__DATA__/d;/^\s*#/d' jamirdochegal | grep http | (
-    while read LINE; do
-	NAME="${LINE%http*}"
-	NAME="${NAME% *}"
-	URL="${LINE/*http/http}"
-	check_active "$NAME" "$URL" "$OK" "$ERRORS"
-    done
-    echo $OK > $DIR/ok
-    echo $ERRORS > $DIR/errors
-)
+if [ $ONLINE = yes ]; then
+    OK=0
+    ERRORS=0
 
-read OK < $DIR/ok
-read ERRORS < $DIR/errors
-if [ $ERRORS -gt 0 ]; then
-    BROKEN=yes
+    sed '1,/__DATA__/d;/^\s*#/d' jamirdochegal | grep http | (
+	while read LINE; do
+	    NAME="${LINE%http*}"
+	    NAME="${NAME% *}"
+	    URL="${LINE/*http/http}"
+	    check_active "$NAME" "$URL" "$OK" "$ERRORS"
+	done
+	echo $OK > $DIR/ok
+	echo $ERRORS > $DIR/errors
+    )
+
+    read OK < $DIR/ok
+    read ERRORS < $DIR/errors
+    if [ $ERRORS -gt 0 ]; then
+	BROKEN=yes
+    fi
+    TOTAL=$(( OK + ERRORS ))
+    status "$TOTAL stations total, $OK ok, $ERRORS errors"
+else
+    printf "${WHITE}>> ${BOLD}skipped${RESET}\n"
 fi
-TOTAL=$(( OK + ERRORS ))
-status "$TOTAL stations total, $OK ok, $ERRORS errors"
 
 
 status 'checking inactive stations'
-OK=0
-ERRORS=0
 
-sed '1,/__DATA__/d;/^\s*[^#]/d;s/^#\s*//' jamirdochegal | grep http | (
-    while read NAME URL; do
-	URL="${URL/*http/http}"
-	check_active "$NAME" "$URL" "$OK" "$ERRORS"
-    done
-    echo $OK > $DIR/ok
-    echo $ERRORS > $DIR/errors
-)
+if [ $ONLINE = yes ]; then
+    OK=0
+    ERRORS=0
 
-read OK < $DIR/ok
-read ERRORS < $DIR/errors
-if [ $OK -gt 0 ]; then
-    BROKEN=yes
+    sed '1,/__DATA__/d;/^\s*[^#]/d;s/^#\s*//' jamirdochegal | grep http | (
+	while read NAME URL; do
+	    URL="${URL/*http/http}"
+	    check_active "$NAME" "$URL" "$OK" "$ERRORS"
+	done
+	echo $OK > $DIR/ok
+	echo $ERRORS > $DIR/errors
+    )
+
+    read OK < $DIR/ok
+    read ERRORS < $DIR/errors
+    if [ $OK -gt 0 ]; then
+	BROKEN=yes
+    fi
+    TOTAL=$(( OK + ERRORS ))
+    status "$TOTAL stations total, $ERRORS broken as expected, $OK unexpectedly ok"
+else
+    printf "${WHITE}>> ${BOLD}skipped${RESET}\n"
 fi
-TOTAL=$(( OK + ERRORS ))
-status "$TOTAL stations total, $ERRORS broken as expected, $OK unexpectedly ok"
-
 
 #################################################################
 
