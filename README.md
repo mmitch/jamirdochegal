@@ -18,6 +18,21 @@ usage
     -r   tune into a random station (default with no arguments given)
 
 
+features
+--------
+
+* jamirdochegal will read additional stations from `~/.jamirdochegalrc`
+  (see end of script for station list format)
+
+
+todos
+-----
+
+* document station list format in here
+* add jamirdochegal etymology (why do I keep thinking that I have
+  already written about that?  if it's not in here, where else?)
+
+
 license
 -------
 
