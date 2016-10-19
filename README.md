@@ -4,8 +4,8 @@ jamirdochegal
 [![Build Status](https://travis-ci.org/mmitch/jamirdochegal.svg?branch=master)](https://travis-ci.org/mmitch/jamirdochegal)
 [![GPL 2+](https://img.shields.io/badge/license-GPL%202%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0-standalone.html)
 
-jamirdochegal is a very simple shell script to listen to web radios
-via mplayer.  The project homepage is at <https://github.com/mmitch/jamirdochegal>.
+jamirdochegal is a simple Perl script to listen to web radios via
+mplayer.  The project homepage is at <https://github.com/mmitch/jamirdochegal>.
 
 
 usage
