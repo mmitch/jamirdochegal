@@ -177,6 +177,7 @@ push @parms, '-playlist' unless exists $station{$action}->{FLAGS}->{DIRECT};
 
 #### find player to use
 my @available_players = grep { player_exists($_) } PLAYERS;
+die 'no suitable player found' unless @available_players;
 my $player = $available_players[-1];
 
 
