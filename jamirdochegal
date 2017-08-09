@@ -242,6 +242,7 @@ soma-metal http://somafm.com/metal.pls
 mc|soma-missioncontrol http://somafm.com/startstream=missioncontrol.pls
 soma-poptron http://somafm.com/startstream=poptron.pls
 sa|soma-secretagent http://somafm.com/startstream=secretagent.pls
+sid|sid station http://185.80.220.12:2199/tunein/jotayl00.pls
 soma-sf1033 http://somafm.com/sf1033.pls
 soma-sonicuniverse http://somafm.com/startstream=sonicuniverse.pls
 soma-spacestation http://somafm.com/startstream=spacestation.pls
@@ -266,7 +267,6 @@ Techno.FM Live Channel DIRECT:http://stream.techno.fm:8000/stream
 # ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
 # subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
 # tt24|Turntables24.com http://stream.turntables24.de:9200/listen.pls
-# sid|sid station http://eu2.reliastream.com:2199/tunein/jotayl00.pls
 # r7|radioseven http://www.radioseven.se/128.pls
 # ttfm|Techno.Techno.FM DIRECT:http://stream.techno.fm/techno.256k.mp3
 # ltfm|Live.Techno.FM DIRECT:http://stream.techno.fm/live.256k.mp3
