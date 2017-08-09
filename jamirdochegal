@@ -23,7 +23,10 @@ use warnings;
 
 use File::Which;
 
-use constant PLAYERS => qw( mplayer mpv );
+use constant PLAYERS => (
+    { BINARY => 'mplayer', PARAMS => [ '-cache', '256' ] },
+    { BINARY => 'mpv', PARAMS => [ '--cache=256' ] }
+    );
 
 #### process a line from the stations list
 my %station;
@@ -70,7 +73,7 @@ sub process_station_line($)
 #### check if a given player exists
 sub player_exists($)
 {
-    return defined which $_;
+    return defined which $_->{BINARY};
 }
 
 #### read global stations
@@ -167,7 +170,7 @@ unless (exists $station{$action}) {
     $action = $matches[0];
 }
 print "\n>>>> $station{$action}->{NAME}\n\n";
-my @parms = ( '--cache=256' );
+my @parms;
 push @parms, ('-demuxer', 'ogg') if exists $station{$action}->{FLAGS}->{OGGDEMUX};
 push @parms, '-playlist' unless exists $station{$action}->{FLAGS}->{DIRECT};
 
@@ -178,7 +181,7 @@ my $player = $available_players[-1];
 
 
 #### and play
-exec $player, @parms, $station{$action}->{URL}, @ARGV;
+exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, $station{$action}->{URL}, @ARGV;
 
 
 #### the station list
