@@ -23,6 +23,8 @@ use warnings;
 
 use File::Which;
 
+use constant PLAYERS => qw( mplayer mpv );
+
 #### process a line from the stations list
 my %station;
 sub process_station_line($)
@@ -63,6 +65,12 @@ sub process_station_line($)
 	return "broken line";
     }
     return "";
+}
+
+#### check if a given player exists
+sub player_exists($)
+{
+    return defined which $_;
 }
 
 #### read global stations
@@ -163,17 +171,15 @@ my @parms = ( '--cache=256' );
 push @parms, ('-demuxer', 'ogg') if exists $station{$action}->{FLAGS}->{OGGDEMUX};
 push @parms, '-playlist' unless exists $station{$action}->{FLAGS}->{DIRECT};
 
-# find player to use
-my $player="";
-my @audio_players = ( 'mplayer', 'mpv' );
-foreach (@audio_players) {
-    if (defined( which("$_")) ) {
-        $player = "$_";
-    }
-}
+
+#### find player to use
+my @available_players = grep { player_exists($_) } PLAYERS;
+my $player = $available_players[-1];
+
 
 #### and play
 exec $player, @parms, $station{$action}->{URL}, @ARGV;
+
 
 #### the station list
 # - define stations:
