@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# jamirdochegal  -  listen to web radios via mplayer 
+# jamirdochegal  -  listen to web radios via mplayer
 # Copyright (C) 2009-2016  Christian Garbs <mitch@cgarbs.de>
 # Licensed under GNU GPL v2 (or later)
 #
@@ -21,6 +21,7 @@
 use strict;
 use warnings;
 
+use File::Which;
 
 #### process a line from the stations list
 my %station;
@@ -57,7 +58,7 @@ sub process_station_line($)
 	    'URL'      => $url,
 	    'FLAGS'    => $flags,
 	};
-	
+
     } else {
 	return "broken line";
     }
@@ -97,7 +98,7 @@ my $action = shift @ARGV;
 if ($action eq '-h') {
     print << "EOF" ;
 
-jamirdochegal  -  listen to web radios via mplayer 
+jamirdochegal  -  listen to web radios via mplayer
 Copyright (C) 2009-2013  Christian Garbs <mitch\@cgarbs.de>
 Licensed under GNU GPL v2 (or later)
 
@@ -158,13 +159,21 @@ unless (exists $station{$action}) {
     $action = $matches[0];
 }
 print "\n>>>> $station{$action}->{NAME}\n\n";
-my @parms = ( '-cache', '128' );
+my @parms = ( '--cache=256' );
 push @parms, ('-demuxer', 'ogg') if exists $station{$action}->{FLAGS}->{OGGDEMUX};
 push @parms, '-playlist' unless exists $station{$action}->{FLAGS}->{DIRECT};
 
-#### and play
-exec 'mplayer', @parms, $station{$action}->{URL}, @ARGV;
+# find player to use
+my $player="";
+my @audio_players = ( 'mplayer', 'mpv' );
+foreach (@audio_players) {
+    if (defined( which("$_")) ) {
+        $player = "$_";
+    }
+}
 
+#### and play
+exec $player, @parms, $station{$action}->{URL}, @ARGV;
 
 #### the station list
 # - define stations:
