@@ -220,7 +220,7 @@ klassikrock DIRECT:http://stream.klassikradio.de/rock/mp3-128/www.klassikradio.d
 klassikschiller DIRECT:http://stream.klassikradio.de/schiller/mp3-128/www.klassikradio.de/
 kohina OGGDEMUX:http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
 ndr2 http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u
-nsw-anime DIRECT:http://listen.nsw-anime.de/
+nsw-live DIRECT:http://nsw-radio.de:8000/nswmp3
 nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
 rainwave http://all.rainwave.cc/tune_in/5.ogg
 ocremix http://ocr.rainwave.cc/tune_in/2.ogg
