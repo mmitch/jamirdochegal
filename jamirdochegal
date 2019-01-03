@@ -200,6 +200,7 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, $station{$action}->{URL}, 
 #   RENAME:<shortcut> <shortcut>
 __DATA__
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
+cvgm DIRECT:http://slacker.cvgm.net/cvgm192.ogg
 dfmw|detektorfm-wort http://detektor.fm/detektor_fm-wort.m3u
 dfmm|detektorfm-musik http://detektor.fm/detektor_fm-musik.m3u
 dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
