@@ -200,7 +200,6 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, $station{$action}->{URL}, 
 #   RENAME:<shortcut> <shortcut>
 __DATA__
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
-demovibes DIRECT:http://privat.is-by.us:8000/necta192.mp3
 dfmw|detektorfm-wort http://detektor.fm/detektor_fm-wort.m3u
 dfmm|detektorfm-musik http://detektor.fm/detektor_fm-musik.m3u
 dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
@@ -220,6 +219,7 @@ klassikrock DIRECT:http://stream.klassikradio.de/rock/mp3-128/www.klassikradio.d
 klassikschiller DIRECT:http://stream.klassikradio.de/schiller/mp3-128/www.klassikradio.de/
 kohina OGGDEMUX:http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
 ndr2 http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u
+nectarine DIRECT:http://nectarine.from-de.com/necta192
 nsw-live DIRECT:http://nsw-radio.de:8000/nswmp3
 nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
 rainwave http://all.rainwave.cc/tune_in/5.ogg
