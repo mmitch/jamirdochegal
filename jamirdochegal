@@ -218,7 +218,7 @@ klassiknature DIRECT:http://stream.klassikradio.de/nature/mp3-128/www.klassikrad
 klassikpiano DIRECT:http://stream.klassikradio.de/piano/mp3-128/www.klassikradio.de/
 klassikrock DIRECT:http://stream.klassikradio.de/rock/mp3-128/www.klassikradio.de/
 klassikschiller DIRECT:http://stream.klassikradio.de/schiller/mp3-128/www.klassikradio.de/
-kohina OGGDEMUX:http://kohina.radio.ethz.ch:8000/kohina.ogg.m3u
+kohina OGGDEMUX:https://kohina.duckdns.org/playlist_https.m3u
 ndr2 http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u
 nectarine DIRECT:http://nectarine.from-de.com/necta192
 nsw-live DIRECT:http://nsw-radio.de:8000/nswmp3
