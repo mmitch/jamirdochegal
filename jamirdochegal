@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 #
 # jamirdochegal  -  listen to web radios via mplayer
-# Copyright (C) 2009-2016  Christian Garbs <mitch@cgarbs.de>
+# Copyright (C) 2009-2016,2019  Christian Garbs <mitch@cgarbs.de>
 # Licensed under GNU GPL v2 (or later)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -97,38 +97,77 @@ if ( -e $rcfile ) {
 
 #### default action
 if (@ARGV == 0) {
-    push @ARGV, '-r';
+    unshift @ARGV, '-r';
 }
 
 
-#### handle actions
-my $action = shift @ARGV;
+#### read flags
+my ($do_help, $do_list, $do_random) = (0, 0, 0);
+while (@ARGV) {
+    if ($ARGV[0] eq '-h') {
+	$do_help = 1;
+	shift @ARGV;
+    } elsif ($ARGV[0] eq '-l') {
+	$do_list = 1;
+	shift @ARGV;
+    } elsif ($ARGV[0] eq '-r') {
+	$do_random = 1;
+	shift @ARGV;
+    } else {
+	last;
+    }
+}
 
 
 #### print help?
-if ($action eq '-h') {
+if ($do_help) {
     print << "EOF" ;
 
 jamirdochegal  -  listen to web radios via mplayer
-Copyright (C) 2009-2013  Christian Garbs <mitch\@cgarbs.de>
+Copyright (C) 2009-2016,2019  Christian Garbs <mitch\@cgarbs.de>
 Licensed under GNU GPL v2 (or later)
 
 usage:
-  jamirdochegal [-h | -l | -r | <station> [<additional-mplayer-arguments>]]
+  jamirdochegal
+  jamirdochegal -h
+  jamirdochegal [-l|-r] <station> [<additional-mplayer-arguments>]
 
   -h   print this help
-  -l   list all stations
+  -l   list stations
   -r   tune into a random station (default with no arguments given)
 
 EOF
-    ;
+    ; ## FIXME: mention ~/.jamirdochegalrc
     exit 0;
 }
 
 
+#### filter station list
+my @matches;
+my $filter;
+if (@ARGV) {
+    $filter = shift @ARGV;
+    if (exists $station{$filter}) {
+	# exact match
+	@matches = ( $station{$filter}->{SHORTNAME} );
+    } else {
+	# match on short names
+	@matches = grep { substr($_, 0, length $filter) eq $filter } keys %station;
+	if (@matches == 0) {
+	    # fallback: try full-text search on long station names
+	    @matches = grep { index($station{$_}->{'NAME'}, $filter) >= 0 } keys %station;
+	}
+    }
+} else {
+    $filter = '';
+    @matches = keys %station;
+}
+@matches = sort @matches;
+
+
 #### print station list?
-if ($action eq '-l') {
-    foreach my $station (sort keys %station) {
+if ($do_list) {
+    foreach my $station (@matches) {
 	if ($station eq $station{$station}->{'NAME'}) {
 	    print "$station\n";
 	} else {
@@ -140,39 +179,31 @@ if ($action eq '-l') {
 
 
 #### random station?
-if ($action eq '-r') {
-    my @station = keys %station;
-    $action = @station[ int rand (@station) ];
+if ($do_random) {
+    @matches = (@matches[ int rand (@matches) ]);
 }
 
 
 #### tune in
-unless (exists $station{$action}) {
-    my @matches = grep { substr($_, 0, length $action) eq $action } sort keys %station;
-    if (@matches == 0) {
-	# fallback: try full-text search on long station names
-	@matches = grep { index($station{$_}->{'NAME'}, $action) >= 0 } sort keys %station;
-    }
-    if (@matches == 0) {
-	die "unknown station `$action'\n";
-    } elsif (@matches > 1) {
-	warn "inexact station name `$action'\n";
-	warn "possible completions:\n";
-	foreach my $station (@matches) {
-	    if ($station eq $station{$station}->{'NAME'}) {
-		print "$station\n";
-	    } else {
-		print "$station  ($station{$station}->{'NAME'})\n";
-	    }
+if (@matches == 0) {
+    die "unknown station `$filter'\n";
+} elsif (@matches > 1) {
+    warn "inexact station name `$filter'\n";
+    warn "possible completions:\n";
+    foreach my $station (@matches) {  ## FIXME: duplicate code; extract method list_stations
+	if ($station eq $station{$station}->{'NAME'}) {
+	    print "$station\n";
+	} else {
+	    print "$station  ($station{$station}->{'NAME'})\n";
 	}
-	exit 0;
     }
-    $action = $matches[0];
+    exit 0;
 }
-print "\n>>>> $station{$action}->{NAME}\n\n";
+my $selected_station = $station{$matches[0]};
+print "\n>>>> $selected_station->{NAME}\n\n";
 my @parms;
-push @parms, ('-demuxer', 'ogg') if exists $station{$action}->{FLAGS}->{OGGDEMUX};
-push @parms, '-playlist' unless exists $station{$action}->{FLAGS}->{DIRECT};
+push @parms, ('-demuxer', 'ogg') if exists $selected_station->{FLAGS}->{OGGDEMUX};
+push @parms, '-playlist' unless exists $selected_station->{FLAGS}->{DIRECT};
 
 
 #### find player to use
@@ -182,7 +213,7 @@ my $player = $available_players[-1];
 
 
 #### and play
-exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, $station{$action}->{URL}, @ARGV;
+exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, $selected_station->{URL}, @ARGV;
 
 
 #### the station list
