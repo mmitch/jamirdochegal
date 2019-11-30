@@ -256,27 +256,38 @@ nsw-live DIRECT:http://nsw-radio.de:8000/nswmp3
 nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
 rainwave http://all.rainwave.cc/tune_in/5.ogg
 ocremix http://ocr.rainwave.cc/tune_in/2.ogg
+sid|sid station http://185.80.220.12:2199/tunein/jotayl00.pls
 slay|slayradio DIRECT:http://relay1.slayradio.org:8000/
 soma-70s https://somafm.com/seventies.pls
+soma-7soul https://somafm.com/startstream=7soul.pls
+soma-bagel https://somafm.com/startstream=bagel.pls
 soma-beatblender https://somafm.com/startstream=beatblender.pls
+soma-brfm https://somafm.com/startstream=brfm.pls
 soma-bootliquor https://somafm.com/startstream=bootliquor.pls
 soma-brfm https://somafm.com/brfm.pls
 soma-cliqhop https://somafm.com/startstream=cliqhop.pls
 soma-covers https://somafm.com/startstream=covers.pls
+soma-christmas-lounge https://somafm.com/startstream=christmas.pls
+soma-defcon https://somafm.com/startstream=defcon.pls
 soma-digitalis https://somafm.com/startstream=digitalis.pls
 soma-doomed https://somafm.com/startstream=doomed.pls
 drone|soma-dronezone https://somafm.com/startstream=dronezone.pls
+soma-dubstep https://somafm.com/startstream=dubstep.pls
 soma-fluid https://somafm.com/fluid.pls
+soma-folkfwd https://somafm.com/folkfwd.pls
 soma-groovesalad https://somafm.com/startstream=groovesalad.pls
+soma-gsclassic https://somafm.com/startstream=gsclassic.pls
+some-jollysoul https://somafm.com/startstream=jollysoul.pls
 soma-illstreet https://somafm.com/startstream=illstreet.pls
 ip|soma-indiepop https://somafm.com/startstream=indiepop.pls
+soma-live https://somafm.com/startstream=live.pls
 soma-lush https://somafm.com/startstream=lush.pls
 soma-metal https://somafm.com/metal.pls
 mc|soma-missioncontrol https://somafm.com/startstream=missioncontrol.pls
 soma-poptron https://somafm.com/startstream=poptron.pls
 sa|soma-secretagent https://somafm.com/startstream=secretagent.pls
-sid|sid station http://185.80.220.12:2199/tunein/jotayl00.pls
 soma-sf1033 https://somafm.com/sf1033.pls
+soma-specials https://somafm.com/specials.pls
 soma-sonicuniverse https://somafm.com/startstream=sonicuniverse.pls
 soma-spacestation https://somafm.com/startstream=spacestation.pls
 soma-suburbsofgoa https://somafm.com/startstream=suburbsofgoa.pls
@@ -284,6 +295,7 @@ soma-tags https://somafm.com/startstream=tags.pls
 soma-thistle https://somafm.com/thistle.pls
 soma-u80s https://somafm.com/startstream=u80s.pls
 soma-xmasinfrisco https://somafm.com/startstream=xmasinfrisco.pls
+soma-xmasrocks https://somafm.com/startstream=xmasrocks.pls
 sst|streaming soundtracks http://www.streamingsoundtracks.com/modules/Listen/MP3-hi.pls
 ctfm|ClubTime.FM http://listen.clubtime.fm/dsl.pls
 wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
