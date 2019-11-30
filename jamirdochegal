@@ -149,7 +149,7 @@ if (@ARGV) {
     $filter = shift @ARGV;
     if (exists $station{$filter}) {
 	# exact match
-	@matches = ( $station{$filter}->{SHORTNAME} );
+	@matches = ( $filter );
     } else {
 	# match on short names
 	@matches = grep { substr($_, 0, length $filter) eq $filter } keys %station;
