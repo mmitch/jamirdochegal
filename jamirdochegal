@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 #
 # jamirdochegal  -  listen to web radios via mplayer
-# Copyright (C) 2009-2016,2019  Christian Garbs <mitch@cgarbs.de>
+# Copyright (C) 2009-2016,2019-2020  Christian Garbs <mitch@cgarbs.de>
 # Licensed under GNU GPL v2 (or later)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -232,8 +232,8 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, $selected_station->{URL}, 
 __DATA__
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
 cvgm DIRECT:http://slacker.cvgm.net/cvgm192.ogg
-dfmw|detektorfm-wort http://detektor.fm/detektor_fm-wort.m3u
-dfmm|detektorfm-musik http://detektor.fm/detektor_fm-musik.m3u
+dfmw|detektorfm-wort https://detektor.fm/detektor_fm-wort.m3u
+dfmm|detektorfm-musik https://detektor.fm/detektor_fm-musik.m3u
 dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
 dradiowissen OGGDEMUX:http://www.dradio.de/streaming/dradiowissen_hq_ogg.m3u
 klassikbrazil DIRECT:http://stream.klassikradio.de/brazil/mp3-128/www.klassikradio.de/
