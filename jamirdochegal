@@ -269,7 +269,6 @@ soma-covers https://somafm.com/startstream=covers.pls
 soma-christmas-lounge https://somafm.com/startstream=christmas.pls
 soma-defcon https://somafm.com/startstream=defcon.pls
 soma-digitalis https://somafm.com/startstream=digitalis.pls
-soma-doomed https://somafm.com/startstream=doomed.pls
 drone|soma-dronezone https://somafm.com/startstream=dronezone.pls
 soma-dubstep https://somafm.com/startstream=dubstep.pls
 soma-fluid https://somafm.com/fluid.pls
@@ -313,3 +312,4 @@ Techno.FM Live Channel DIRECT:http://stream.techno.fm:8000/stream
 # r7|radioseven http://www.radioseven.se/128.pls
 # ttfm|Techno.Techno.FM DIRECT:http://stream.techno.fm/techno.256k.mp3
 # ltfm|Live.Techno.FM DIRECT:http://stream.techno.fm/live.256k.mp3
+# soma-doomed https://somafm.com/startstream=doomed.pls
