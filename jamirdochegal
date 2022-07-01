@@ -299,7 +299,7 @@ ctfm|ClubTime.FM http://listen.clubtime.fm/dsl.pls
 wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
 htfm|HouseTime.FM http://listen.housetime.fm/dsl.pls
 tbfm|TranceBase.FM http://listen.trancebase.fm/dsl.pls
-Techno.FM Live Channel DIRECT:http://stream.techno.fm:8000/stream
+Techno.FM Live Channel DIRECT:https://stream.techno.fm/radio1-192k.mp3
 
 # bitjam DIRECT:OGGDEMUX:http://88.80.10.21:8086/bitjam.ogg
 # cryosleep http://207.200.96.225:8022/listen.pls
