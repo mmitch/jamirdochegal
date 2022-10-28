@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 #
 # jamirdochegal  -  listen to web radios via mplayer
-# Copyright (C) 2009-2016,2019-2020  Christian Garbs <mitch@cgarbs.de>
+# Copyright (C) 2009-2022  Christian Garbs <mitch@cgarbs.de>
 # Licensed under GNU GPL v2 (or later)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -74,6 +74,31 @@ sub process_station_line($)
 sub player_exists($)
 {
     return defined which $_->{BINARY};
+}
+
+#### get URL for station: either use direct URL or try to parse playlist
+sub get_url($)
+{
+    my ($station) = @_;
+
+    my $url = $station->{URL};
+    if (exists ($station->{FLAGS}->{DIRECT})) {
+	return $url;
+    }
+
+    # this is totally simple & stupid but mplayer discouraged using their -playlist option
+    my @found = ();
+    open my $playlist, '-|', "curl -s \"$url\"" or die "can't open curl for $url: $!\n";
+    while (my $line = <$playlist>) {
+	if ($line =~ m,(https?://\S+),) {
+	    my $found = $1;
+	    $found =~ s,["].*,,;
+	    push @found, $found;
+	}
+    }
+    close $playlist or die "can't close curl for $url: $!\n";
+
+    return @found[ int(rand(scalar @found)) ];
 }
 
 #### read global stations
@@ -203,7 +228,6 @@ my $selected_station = $station{$matches[0]};
 print "\n>>>> $selected_station->{NAME}\n\n";
 my @parms;
 push @parms, ('-demuxer', 'ogg') if exists $selected_station->{FLAGS}->{OGGDEMUX};
-push @parms, '-playlist' unless exists $selected_station->{FLAGS}->{DIRECT};
 
 
 #### find player to use
@@ -213,7 +237,7 @@ my $player = $available_players[-1];
 
 
 #### and play
-exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, $selected_station->{URL}, @ARGV;
+exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, get_url($selected_station), @ARGV;
 
 
 #### the station list

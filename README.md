@@ -7,6 +7,7 @@ jamirdochegal
 jamirdochegal is a simple Perl script to listen to web radios via
 mplayer.  The project homepage is at <https://github.com/mmitch/jamirdochegal>.
 
+jamirdochegal needs to call curl(1) to parse playlists
 
 usage
 -----
@@ -37,7 +38,7 @@ license
 -------
 
 jamirdochegal  -  listen to web radios via mplayer  
-Copyright (C) 2009-2016  Christian Garbs <mitch@cgarbs.de>  
+Copyright (C) 2009-2022  Christian Garbs <mitch@cgarbs.de>  
 Licensed under GNU GPL v2 (or later)  
 
 This program is free software: you can redistribute it and/or modify
