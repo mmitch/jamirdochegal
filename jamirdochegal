@@ -25,7 +25,7 @@ use IPC::Cmd qw(can_run);
 
 use constant PLAYERS => (
     { BINARY => 'mplayer', PARAMS => [ '-cache', '256' ] },
-    { BINARY => 'mpv', PARAMS => [ '--cache=256' ] }
+    { BINARY => 'mpv', PARAMS => [ '--cache-secs=10' ] }
     );
 
 #### process a line from the stations list
