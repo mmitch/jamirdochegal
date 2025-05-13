@@ -21,11 +21,11 @@
 use strict;
 use warnings;
 
-use File::Which;
+use IPC::Cmd qw(can_run);
 
 use constant PLAYERS => (
     { BINARY => 'mplayer', PARAMS => [ '-cache', '256' ] },
-    { BINARY => 'mpv', PARAMS => [ '--cache=256' ] }
+    { BINARY => 'mpv', PARAMS => [ '--cache-secs=10' ] }
     );
 
 #### process a line from the stations list
@@ -73,7 +73,7 @@ sub process_station_line($)
 #### check if a given player exists
 sub player_exists($)
 {
-    return defined which $_->{BINARY};
+    return can_run( $_->{BINARY} );
 }
 
 #### get URL for station: either use direct URL or try to parse playlist
