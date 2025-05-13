@@ -1,7 +1,7 @@
 jamirdochegal
 =============
 
-[![Build Status](https://travis-ci.org/mmitch/jamirdochegal.svg?branch=master)](https://travis-ci.org/mmitch/jamirdochegal)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/mmitch/jamirdochegal/build.yml?branch=master)](https://github.com/mmitch/jamirdochegal/actions?query=branch%3Amaster)
 [![GPL 2+](https://img.shields.io/badge/license-GPL%202%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0-standalone.html)
 
 jamirdochegal is a simple Perl script to listen to web radios via

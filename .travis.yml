@@ -1,8 +1,0 @@
-language: perl
-
-perl:
-  - "5.30"
-
-install: true
-
-script: ./test.sh --offline
