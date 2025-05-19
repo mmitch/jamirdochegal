@@ -48,6 +48,11 @@ sub process_station_line($)
 	$station{$2}->{'SHORTCUT'} = $2;
 	delete $station{$1};
 
+    } elsif ($line =~ /^\s*ALIAS:(\S+)\s(\S+)*$/) {
+	return "can't alias unkown station `$1'" unless exists $station{$1};
+	$station{$2} = $station{$1};
+	$station{$2}->{'SHORTCUT'} = $2;
+
     } elsif ($line =~ /^(?:\s*(\S+)\|)?(.*)\s+(\S+)\s*$/) {
 	my ($shortcut, $name, $url, $flags) = ($1, $2, $3, {});
 
@@ -253,6 +258,9 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, get_url($selected_station)
 # - rename stations:
 #   RENAME:<name> <shortcut>
 #   RENAME:<shortcut> <shortcut>
+# - add aliases for existing stations:
+#   ALIAS:<alias> <name>
+#   ALIAS:<alias> <shortcut>
 __DATA__
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
 cvgm DIRECT:http://slacker.cvgm.net/cvgm192.ogg
