@@ -324,35 +324,35 @@ wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
 htfm|HouseTime.FM http://listen.housetime.fm/dsl.pls
 tbfm|TranceBase.FM http://listen.trancebase.fm/dsl.pls
 Techno.FM Live Channel DIRECT:https://stream.techno.fm/radio1-192k.mp3
-ssl|Sunshine Live DIRECT:https://stream.sunshine-live.de/live/mp3-192
-sslch|Sunshine Live CH DIRECT:https://stream.sunshine-live.de/schweiz/mp3-192
-sslecafe|Sunshine Live Électrique Café DIRECT:https://stream.sunshine-live.de/electriquecafe/mp3-192
-ssleurodance|Sunshine Live Eurodance DIRECT:https://stream.sunshine-live.de/eurodance/mp3-192
-sslmayday|Sunshine Live Mayday DIRECT:https://stream.sunshine-live.de/mayday/mp3-192
-sslnatureone|Sunshine Live Nature One DIRECT:https://stream.sunshine-live.de/natureone/mp3-192
-ssltimewarp|Sunshine Live Time Warp DIRECT:https://stream.sunshine-live.de/timewarp/mp3-192
-ssl80s|Sunshine Live 80s DIRECT:https://stream.sunshine-live.de/80er/mp3-192
-ssl90s|Sunshine Live 90s DIRECT:https://stream.sunshine-live.de/90er/mp3-192
-ssl2000s|Sunshine Live 2000s DIRECT:https://stream.sunshine-live.de/2000er/mp3-192
-ssl2010s|Sunshine Live 2010s DIRECT:https://stream.sunshine-live.de/2010er/mp3-192
-sslchillout|Sunshine Live Chillout DIRECT:https://stream.sunshine-live.de/sp8/mp3-192
-sslclassics|Sunshine Live Classics DIRECT:https://stream.sunshine-live.de/classics/mp3-192
-ssledm|Sunshine Live EDM DIRECT:https://stream.sunshine-live.de/edm/mp3-192
-sslfemalepower|Sunshine Live Female Power DIRECT:https://stream.sunshine-live.de/technoqueens/mp3-192
-sslfestival|Sunshine Live Festival DIRECT:https://stream.sunshine-live.de/festival/mp3-192
-sslhardstyle|Sunshine Live Hardstyle DIRECT:https://stream.sunshine-live.de/hardstyle/mp3-192
-sslhardcore|Sunshine Live Hardcore DIRECT:https://stream.sunshine-live.de/Hardcore/mp3-192
-sslhardtechno|Sunshine Live Hardtechno DIRECT:https://stream.sunshine-live.de/Hardtechno/mp3-192
-sslhouse|Sunshine Live House DIRECT:https://stream.sunshine-live.de/house/mp3-192
-sslafrohouse|Sunshine Live Afro House DIRECT:https://stream.sunshine-live.de/afrohouse/mp3-192
-sslibiza|Sunshine Live Ibiza DIRECT:https://stream.sunshine-live.de/ibiza/mp3-192
-ssllounge|Sunshine Live Lounge DIRECT:https://stream.sunshine-live.de/lounge/mp3-192
-sslmelodicbeats|Sunshine Live Melodic Beats DIRECT:https://stream.sunshine-live.de/MelodicB/mp3-192
-sslmixmission|Sunshine Live Mix Mission DIRECT:https://stream.sunshine-live.de/mixmission/mp3-192
-ssltechno|Sunshine Live Techno DIRECT:https://stream.sunshine-live.de/techno/mp3-192
-ssltrance|Sunshine Live Trance DIRECT:https://stream.sunshine-live.de/trance/mp3-192
-sslworkout|Sunshine Live Workout DIRECT:https://stream.sunshine-live.de/workout/mp3-192
-sslblue|Sunshine Live Blue DIRECT:https://stream.sunshine-live.de/Blue/mp3-192
+ssl|sunshine live DIRECT:https://stream.sunshine-live.de/live/mp3-192
+ssl-ch|sunshine live - Schweiz DIRECT:https://stream.sunshine-live.de/schweiz/mp3-192
+ssl-ecafe|sunshine live - Électrique Café DIRECT:https://stream.sunshine-live.de/electriquecafe/mp3-192
+ssl-eurodance|sunshine live - Eurodance DIRECT:https://stream.sunshine-live.de/eurodance/mp3-192
+ssl-mayday|sunshine live - Mayday DIRECT:https://stream.sunshine-live.de/mayday/mp3-192
+ssl-natureone|sunshine live - Nature One DIRECT:https://stream.sunshine-live.de/natureone/mp3-192
+ssl-timewarp|sunshine live - Time Warp DIRECT:https://stream.sunshine-live.de/timewarp/mp3-192
+ssl-80s|sunshine live - 80s DIRECT:https://stream.sunshine-live.de/80er/mp3-192
+ssl-90s|sunshine live - 90s DIRECT:https://stream.sunshine-live.de/90er/mp3-192
+ssl-2000s|sunshine live - 2000s DIRECT:https://stream.sunshine-live.de/2000er/mp3-192
+ssl-2010s|sunshine live - 2010s DIRECT:https://stream.sunshine-live.de/2010er/mp3-192
+ssl-chillout|sunshine live - Chillout DIRECT:https://stream.sunshine-live.de/sp8/mp3-192
+ssl-classics|sunshine live - Classics DIRECT:https://stream.sunshine-live.de/classics/mp3-192
+ssl-edm|sunshine live - EDM DIRECT:https://stream.sunshine-live.de/edm/mp3-192
+ssl-femalepower|sunshine live - Female Power DIRECT:https://stream.sunshine-live.de/technoqueens/mp3-192
+ssl-festival|sunshine live - Festival DIRECT:https://stream.sunshine-live.de/festival/mp3-192
+ssl-hardstyle|sunshine live - Hardstyle DIRECT:https://stream.sunshine-live.de/hardstyle/mp3-192
+ssl-hardcore|sunshine live - Hardcore DIRECT:https://stream.sunshine-live.de/Hardcore/mp3-192
+ssl-hardtechno|sunshine live - Hardtechno DIRECT:https://stream.sunshine-live.de/Hardtechno/mp3-192
+ssl-house|sunshine live - House DIRECT:https://stream.sunshine-live.de/house/mp3-192
+ssl-afrohouse|sunshine live - Afro House DIRECT:https://stream.sunshine-live.de/afrohouse/mp3-192
+ssl-ibiza|sunshine live - Ibiza DIRECT:https://stream.sunshine-live.de/ibiza/mp3-192
+ssl-lounge|sunshine live - Lounge DIRECT:https://stream.sunshine-live.de/lounge/mp3-192
+ssl-melodicbeats|sunshine live - Melodic Beats DIRECT:https://stream.sunshine-live.de/MelodicB/mp3-192
+ssl-mixmission|sunshine live - Mix Mission DIRECT:https://stream.sunshine-live.de/mixmission/mp3-192
+ssl-techno|sunshine live - Techno DIRECT:https://stream.sunshine-live.de/techno/mp3-192
+ssl-trance|sunshine live - Trance DIRECT:https://stream.sunshine-live.de/trance/mp3-192
+ssl-workout|sunshine live - Workout DIRECT:https://stream.sunshine-live.de/workout/mp3-192
+ssl-blue|sunshine live - Blue DIRECT:https://stream.sunshine-live.de/Blue/mp3-192
 
 # bitjam DIRECT:OGGDEMUX:http://88.80.10.21:8086/bitjam.ogg
 # cryosleep http://207.200.96.225:8022/listen.pls
