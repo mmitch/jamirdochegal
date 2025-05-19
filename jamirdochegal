@@ -263,7 +263,8 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, get_url($selected_station)
 #   ALIAS:<alias> <shortcut>
 __DATA__
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
-cvgm DIRECT:http://slacker.cvgm.net/cvgm192.ogg
+# Website: https://radio.cvgm.net/demovibes ; this is the UK stream relay:
+cvgm DIRECT:http://radio.chapter3-it.io/cvgm192
 dfmw|detektorfm-wort https://detektor.fm/detektor_fm-wort.m3u
 dfmm|detektorfm-musik https://detektor.fm/detektor_fm-musik.m3u
 dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
@@ -284,11 +285,15 @@ klassikschiller DIRECT:http://stream.klassikradio.de/schiller/mp3-128/www.klassi
 kohina OGGDEMUX:https://kohina.duckdns.org/playlist_https.m3u
 ndr2 http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u
 nectarine DIRECT:http://nectarine.shakeme.info:8000/nectarine
-nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
-rainwave http://all.rainwave.cc/tune_in/5.ogg
-ocremix http://ocr.rainwave.cc/tune_in/2.ogg
-sid|sid station http://185.80.220.12:2199/tunein/jotayl00.pls
-slay|slayradio DIRECT:http://relay1.slayradio.org:8000/
+rw-game|Rainwave - Game http://rainwave.cc/tune_in/1.ogg.m3u
+rw-ocremix|Rainwave - OC Remix http://rainwave.cc/tune_in/2.ogg.m3u
+rw-covers|Rainwave - Covers http://rainwave.cc/tune_in/3.ogg.m3u
+rw-chiptune|Rainwave - Chiptune http://rainwave.cc/tune_in/4.ogg.m3u
+rw-all|Rainwave - All http://rainwave.cc/tune_in/5.ogg.m3u
+ALIAS:rw-all rainwave
+ALIAS:rw-ocremix ocremix
+sid|sid station https://solid24.streamupsolutions.com:2199/tunein/icfablwz.pls
+slay|slayradio https://www.slayradio.org/tune_in.php/128kbps/slayradio.128.m3u
 soma-70s https://somafm.com/seventies.pls
 soma-7soul https://somafm.com/startstream=7soul.pls
 soma-bagel https://somafm.com/startstream=bagel.pls
@@ -331,7 +336,7 @@ ctfm|ClubTime.FM http://listen.clubtime.fm/dsl.pls
 wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
 htfm|HouseTime.FM http://listen.housetime.fm/dsl.pls
 tbfm|TranceBase.FM http://listen.trancebase.fm/dsl.pls
-Techno.FM Live Channel DIRECT:https://stream.techno.fm/radio1-192k.mp3
+tfm|Techno.FM Live Channel DIRECT:https://stream.techno.fm/radio1-192k.mp3
 ssl|sunshine live DIRECT:https://stream.sunshine-live.de/live/mp3-192
 ssl-ch|sunshine live - Schweiz DIRECT:https://stream.sunshine-live.de/schweiz/mp3-192
 ssl-ecafe|sunshine live - Électrique Café DIRECT:https://stream.sunshine-live.de/electriquecafe/mp3-192
@@ -365,6 +370,7 @@ ssl-blue|sunshine live - Blue DIRECT:https://stream.sunshine-live.de/Blue/mp3-19
 # bitjam DIRECT:OGGDEMUX:http://88.80.10.21:8086/bitjam.ogg
 # cryosleep http://207.200.96.225:8022/listen.pls
 # hardrave.jp http://hardrave.jp:9000/listen.pls
+# nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
 # phish|live Phish radio http://www.livephish.com/radio/listen.m3u
 # rivendell http://www.radiorivendell.com/lib/blocks/rr_play.php?play_f=play&bitrate=128&codec=mp3&player=Winamp
 # subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
