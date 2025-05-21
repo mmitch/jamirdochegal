@@ -295,42 +295,49 @@ ALIAS:rw-ocremix ocremix
 sid|sid station https://solid24.streamupsolutions.com:2199/tunein/icfablwz.pls
 slay|slayradio https://www.slayradio.org/tune_in.php/128kbps/slayradio.128.m3u
 soma-70s https://somafm.com/seventies.pls
-soma-7soul https://somafm.com/startstream=7soul.pls
-soma-bagel https://somafm.com/startstream=bagel.pls
-soma-beatblender https://somafm.com/startstream=beatblender.pls
-soma-brfm https://somafm.com/startstream=brfm.pls
-soma-bootliquor https://somafm.com/startstream=bootliquor.pls
+soma-7soul https://somafm.com/7soul.pls
+soma-beatblender https://somafm.com/beatblender.pls
+soma-bootliquor https://somafm.com/bootliquor.pls
+soma-bossa https://somafm.com/bossa.pls
 soma-brfm https://somafm.com/brfm.pls
-soma-cliqhop https://somafm.com/startstream=cliqhop.pls
-soma-covers https://somafm.com/startstream=covers.pls
-soma-christmas-lounge https://somafm.com/startstream=christmas.pls
-soma-defcon https://somafm.com/startstream=defcon.pls
-soma-digitalis https://somafm.com/startstream=digitalis.pls
-drone|soma-dronezone https://somafm.com/startstream=dronezone.pls
-soma-dubstep https://somafm.com/startstream=dubstep.pls
+soma-chillits https://somafm.com/chillits.pls
+soma-cliqhop https://somafm.com/cliqhop.pls
+soma-covers https://somafm.com/covers.pls
+soma-darkzone https://somafm.com/darkzone.pls
+soma-deepspaceone https://somafm.com/deepspaceone.pls
+soma-defcon https://somafm.com/defcon.pls
+soma-digitalis https://somafm.com/digitalis.pls
+soma-doomed https://somafm.com/doomed.pls
+drone|soma-dronezone https://somafm.com/dronezone.pls
+soma-dubsteb https://somafm.com/dubstep.pls
 soma-fluid https://somafm.com/fluid.pls
 soma-folkfwd https://somafm.com/folkfwd.pls
-soma-groovesalad https://somafm.com/startstream=groovesalad.pls
-soma-gsclassic https://somafm.com/startstream=gsclassic.pls
-some-jollysoul https://somafm.com/startstream=jollysoul.pls
-soma-illstreet https://somafm.com/startstream=illstreet.pls
-ip|soma-indiepop https://somafm.com/startstream=indiepop.pls
-soma-live https://somafm.com/startstream=live.pls
-soma-lush https://somafm.com/startstream=lush.pls
+soma-groovesalad https://somafm.com/groovesalad.pls
+soma-gsclassic https://somafm.com/gsclassic.pls
+soma-illstreet https://somafm.com/illstreet.pls
+ip|soma-indiepop https://somafm.com/indiepop.pls
+soma-insound https://somafm.com/insound.pls
+soma-live https://somafm.com/live.pls
+soma-lush https://somafm.com/lush.pls
 soma-metal https://somafm.com/metal.pls
-mc|soma-missioncontrol https://somafm.com/startstream=missioncontrol.pls
-soma-poptron https://somafm.com/startstream=poptron.pls
-sa|soma-secretagent https://somafm.com/startstream=secretagent.pls
+mc|soma-missioncontrol https://somafm.com/missioncontrol.pls
+soma-n5md https://somafm.com/n5md.pls
+soma-poptron https://somafm.com/poptron.pls
+soma-reggae https://somafm.com/reggae.pls
+soma-scanner https://somafm.com/scanner.pls
+sa|soma-secretagent https://somafm.com/secretagent.pls
 soma-sf1033 https://somafm.com/sf1033.pls
+soma-sfinsf130 https://somafm.com/sfinsf.pls
+soma-sonicuniverse https://somafm.com/sonicuniverse.pls
+soma-spacestation https://somafm.com/spacestation.pls
 soma-specials https://somafm.com/specials.pls
-soma-sonicuniverse https://somafm.com/startstream=sonicuniverse.pls
-soma-spacestation https://somafm.com/startstream=spacestation.pls
-soma-suburbsofgoa https://somafm.com/startstream=suburbsofgoa.pls
-soma-tags https://somafm.com/startstream=tags.pls
+soma-suburbsofgoa https://somafm.com/suburbsofgoa.pls
+soma-synphaera https://somafm.com/synphaera.pls
+soma-trip|some-thetrip https://somafm.com/thetrip.pls
 soma-thistle https://somafm.com/thistle.pls
-soma-u80s https://somafm.com/startstream=u80s.pls
-soma-xmasinfrisko https://somafm.com/startstream=xmasinfrisko.pls
-soma-xmasrocks https://somafm.com/startstream=xmasrocks.pls
+soma-tikitime https://somafm.com/tikitime.pls
+soma-u80s https://somafm.com/u80s.pls
+soma-vaporwaves https://somafm.com/vaporwaves.pls
 sst|streaming soundtracks http://www.streamingsoundtracks.com/modules/Listen/MP3-hi.pls
 ctfm|ClubTime.FM http://listen.clubtime.fm/dsl.pls
 wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
@@ -378,4 +385,3 @@ ssl-blue|sunshine live - Blue DIRECT:https://stream.sunshine-live.de/Blue/mp3-19
 # r7|radioseven http://www.radioseven.se/128.pls
 # ttfm|Techno.Techno.FM DIRECT:http://stream.techno.fm/techno.256k.mp3
 # ltfm|Live.Techno.FM DIRECT:http://stream.techno.fm/live.256k.mp3
-# soma-doomed https://somafm.com/startstream=doomed.pls
