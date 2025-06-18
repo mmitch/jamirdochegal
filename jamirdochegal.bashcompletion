@@ -21,14 +21,16 @@ __jamirdochegal()
 
     # otherwise expand to station list
     else
-	mapfile -t COMPREPLY < <( compgen -W "$(jamirdochegal -l | cut -d' ' -f1)" -- "$cur" )
+	mapfile -t COMPREPLY < <( compgen -W "$(jamirdochegal -l | sed -e 's/  (/\n"/' -e 's/)$/"/')" -- "$cur" )
     fi
 
-    # add trailing spaces to all results
+    # quote results to keep spaces intact
     local i
     for (( i=0; i < ${#COMPREPLY[@]}; i++ )); do
-	COMPREPLY[i]="${COMPREPLY[i]} "
+	if [[ $COMPREPLY[i] =~ ' ' ]]; then
+	    COMPREPLY[i]="'${COMPREPLY[i]}'"
+	fi
     done
 }
 
-complete -F __jamirdochegal -o nospace jamirdochegal
+complete -F __jamirdochegal jamirdochegal
