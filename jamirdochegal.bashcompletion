@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# bash completion script for jamirdochegal
+#
+# 2025 (C) Christian Garbs <mitch@cgarbs,de>
+
+__jamirdochegal()
+{
+    # expand only the first parameter
+    if [ "$COMP_CWORD" -gt 1 ]; then
+	COMPREPLY=()
+	return
+    fi
+
+    # current word
+    local cur=${COMP_WORDS[COMP_CWORD]}
+
+    # expand to possible options when starting with a dash
+    if [ "${cur:0:1}" = '-' ]; then
+	mapfile -t COMPREPLY < <( compgen -W "-h -l -r" -- "$cur" )
+
+    # otherwise expand to station list
+    else
+	mapfile -t COMPREPLY < <( compgen -W "$(jamirdochegal -l | cut -d' ' -f1)" -- "$cur" )
+    fi
+
+    # add trailing spaces to all results
+    local i
+    for (( i=0; i < ${#COMPREPLY[@]}; i++ )); do
+	COMPREPLY[i]="${COMPREPLY[i]} "
+    done
+}
+
+complete -F __jamirdochegal -o nospace jamirdochegal
