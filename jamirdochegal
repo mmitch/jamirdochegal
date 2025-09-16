@@ -262,7 +262,7 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, get_url($selected_station)
 #   ALIAS:<alias> <name>
 #   ALIAS:<alias> <shortcut>
 __DATA__
-aby-antenne|ANTENNE BAYERN Live DIRECT:https://stream.antenne.de/antenne/stream/aacp
+aby-live|ANTENNE BAYERN Live DIRECT:https://stream.antenne.de/antenne/stream/aacp
 aby-2000er-hits|ANTENNE BAYERN 2000er Hits DIRECT:https://stream.antenne.de/2000er-hits/stream/aacp
 aby-2010er-hits|ANTENNE BAYERN 2010er Hits DIRECT:https://stream.antenne.de/2010er-hits/stream/aacp
 aby-70er-hits|ANTENNE BAYERN 70er Hits DIRECT:https://stream.antenne.de/70er-hits/stream/aacp
@@ -295,11 +295,11 @@ aby-happy-hits|ANTENNE BAYERN Happy Hits DIRECT:https://stream.antenne.de/happy-
 aby-herbst-hits|ANTENNE BAYERN Herbst Hits DIRECT:https://stream.antenne.de/herbst-hits/stream/aacp
 aby-hits-fuer-kids|ANTENNE BAYERN Hits für Kids DIRECT:https://stream.antenne.de/hits-fuer-kids/stream/aacp
 aby-in-the-mix|ANTENNE BAYERN In the mix DIRECT:https://stream.antenne.de/in-the-mix/stream/aacp
-aby-antenne-bayern-italo-hits|ANTENNE BAYERN Italo Hits DIRECT:https://stream.antenne.de/antenne-bayern-italo-hits/stream/aacp
+aby-italo-hits|ANTENNE BAYERN Italo Hits DIRECT:https://stream.antenne.de/antenne-bayern-italo-hits/stream/aacp
 aby-lounge|ANTENNE BAYERN Lounge DIRECT:https://stream.antenne.de/lounge/stream/aacp
 aby-lovesongs|ANTENNE BAYERN Lovesongs DIRECT:https://stream.antenne.de/lovesongs/stream/aacp
 aby-mallorca-party|ANTENNE BAYERN Mallorca Party DIRECT:https://stream.antenne.de/mallorca-party/stream/aacp
-aby-antenne-bayern-ndw|ANTENNE BAYERN NDW DIRECT:https://stream.antenne.de/antenne-bayern-ndw/stream/aacp
+aby-ndw|ANTENNE BAYERN NDW DIRECT:https://stream.antenne.de/antenne-bayern-ndw/stream/aacp
 aby-nur-die-musik|ANTENNE BAYERN Nur die Musik DIRECT:https://stream.antenne.de/nur-die-musik/stream/aacp
 aby-oldie-antenne|ANTENNE BAYERN OLDIE ANTENNE Live - 60er, 70er, 80er DIRECT:https://stream.antenne.de/oldie-antenne/stream/aacp
 aby-oktoberfest-hits|ANTENNE BAYERN Oktoberfest Hits DIRECT:https://stream.antenne.de/oktoberfest-hits/stream/aacp
