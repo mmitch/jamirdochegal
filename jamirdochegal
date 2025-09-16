@@ -48,6 +48,11 @@ sub process_station_line($)
 	$station{$2}->{'SHORTCUT'} = $2;
 	delete $station{$1};
 
+    } elsif ($line =~ /^\s*ALIAS:(\S+)\s(\S+)*$/) {
+	return "can't alias unkown station `$1'" unless exists $station{$1};
+	$station{$2} = $station{$1};
+	$station{$2}->{'SHORTCUT'} = $2;
+
     } elsif ($line =~ /^(?:\s*(\S+)\|)?(.*)\s+(\S+)\s*$/) {
 	my ($shortcut, $name, $url, $flags) = ($1, $2, $3, {});
 
@@ -253,6 +258,9 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, get_url($selected_station)
 # - rename stations:
 #   RENAME:<name> <shortcut>
 #   RENAME:<shortcut> <shortcut>
+# - add aliases for existing stations:
+#   ALIAS:<alias> <name>
+#   ALIAS:<alias> <shortcut>
 __DATA__
 aby-antenne|ANTENNE BAYERN Live DIRECT:https://stream.antenne.de/antenne/stream/aacp
 aby-2000er-hits|ANTENNE BAYERN 2000er Hits DIRECT:https://stream.antenne.de/2000er-hits/stream/aacp
@@ -306,7 +314,8 @@ aby-top-40|ANTENNE BAYERN Top 40 DIRECT:https://stream.antenne.de/top-40/stream/
 aby-weihnachts-hits|ANTENNE BAYERN Weihnachtshits DIRECT:https://stream.antenne.de/weihnachts-hits/stream/aacp
 aby-workout-hits|ANTENNE BAYERN Workout Mix DIRECT:https://stream.antenne.de/workout-hits/stream/aacp
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
-cvgm DIRECT:http://slacker.cvgm.net/cvgm192.ogg
+# Website: https://radio.cvgm.net/demovibes ; this is the UK stream relay:
+cvgm DIRECT:http://radio.chapter3-it.io/cvgm192
 dfmw|detektorfm-wort https://detektor.fm/detektor_fm-wort.m3u
 dfmm|detektorfm-musik https://detektor.fm/detektor_fm-musik.m3u
 dlf|deutschlandfunk OGGDEMUX:http://www.dradio.de/streaming/dlf_hq_ogg.m3u
@@ -327,54 +336,65 @@ klassikschiller DIRECT:http://stream.klassikradio.de/schiller/mp3-128/www.klassi
 kohina OGGDEMUX:https://kohina.duckdns.org/playlist_https.m3u
 ndr2 http://www.ndr.de/resources/metadaten/audio/m3u/ndr2.m3u
 nectarine DIRECT:http://nectarine.shakeme.info:8000/nectarine
-nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
-rainwave http://all.rainwave.cc/tune_in/5.ogg
-ocremix http://ocr.rainwave.cc/tune_in/2.ogg
-sid|sid station http://185.80.220.12:2199/tunein/jotayl00.pls
-slay|slayradio DIRECT:http://relay1.slayradio.org:8000/
+rw-game|Rainwave - Game http://rainwave.cc/tune_in/1.ogg.m3u
+rw-ocremix|Rainwave - OC Remix http://rainwave.cc/tune_in/2.ogg.m3u
+rw-covers|Rainwave - Covers http://rainwave.cc/tune_in/3.ogg.m3u
+rw-chiptune|Rainwave - Chiptune http://rainwave.cc/tune_in/4.ogg.m3u
+rw-all|Rainwave - All http://rainwave.cc/tune_in/5.ogg.m3u
+ALIAS:rw-all rainwave
+ALIAS:rw-ocremix ocremix
+sid|sid station https://solid24.streamupsolutions.com:2199/tunein/icfablwz.pls
+slay|slayradio https://www.slayradio.org/tune_in.php/128kbps/slayradio.128.m3u
 soma-70s https://somafm.com/seventies.pls
-soma-7soul https://somafm.com/startstream=7soul.pls
-soma-bagel https://somafm.com/startstream=bagel.pls
-soma-beatblender https://somafm.com/startstream=beatblender.pls
-soma-brfm https://somafm.com/startstream=brfm.pls
-soma-bootliquor https://somafm.com/startstream=bootliquor.pls
+soma-7soul https://somafm.com/7soul.pls
+soma-beatblender https://somafm.com/beatblender.pls
+soma-bootliquor https://somafm.com/bootliquor.pls
+soma-bossa https://somafm.com/bossa.pls
 soma-brfm https://somafm.com/brfm.pls
-soma-cliqhop https://somafm.com/startstream=cliqhop.pls
-soma-covers https://somafm.com/startstream=covers.pls
-soma-christmas-lounge https://somafm.com/startstream=christmas.pls
-soma-defcon https://somafm.com/startstream=defcon.pls
-soma-digitalis https://somafm.com/startstream=digitalis.pls
-drone|soma-dronezone https://somafm.com/startstream=dronezone.pls
-soma-dubstep https://somafm.com/startstream=dubstep.pls
+soma-chillits https://somafm.com/chillits.pls
+soma-cliqhop https://somafm.com/cliqhop.pls
+soma-covers https://somafm.com/covers.pls
+soma-darkzone https://somafm.com/darkzone.pls
+soma-deepspaceone https://somafm.com/deepspaceone.pls
+soma-defcon https://somafm.com/defcon.pls
+soma-digitalis https://somafm.com/digitalis.pls
+soma-doomed https://somafm.com/doomed.pls
+drone|soma-dronezone https://somafm.com/dronezone.pls
+soma-dubsteb https://somafm.com/dubstep.pls
 soma-fluid https://somafm.com/fluid.pls
 soma-folkfwd https://somafm.com/folkfwd.pls
-soma-groovesalad https://somafm.com/startstream=groovesalad.pls
-soma-gsclassic https://somafm.com/startstream=gsclassic.pls
-some-jollysoul https://somafm.com/startstream=jollysoul.pls
-soma-illstreet https://somafm.com/startstream=illstreet.pls
-ip|soma-indiepop https://somafm.com/startstream=indiepop.pls
-soma-live https://somafm.com/startstream=live.pls
-soma-lush https://somafm.com/startstream=lush.pls
+soma-groovesalad https://somafm.com/groovesalad.pls
+soma-gsclassic https://somafm.com/gsclassic.pls
+soma-illstreet https://somafm.com/illstreet.pls
+ip|soma-indiepop https://somafm.com/indiepop.pls
+soma-insound https://somafm.com/insound.pls
+soma-live https://somafm.com/live.pls
+soma-lush https://somafm.com/lush.pls
 soma-metal https://somafm.com/metal.pls
-mc|soma-missioncontrol https://somafm.com/startstream=missioncontrol.pls
-soma-poptron https://somafm.com/startstream=poptron.pls
-sa|soma-secretagent https://somafm.com/startstream=secretagent.pls
+mc|soma-missioncontrol https://somafm.com/missioncontrol.pls
+soma-n5md https://somafm.com/n5md.pls
+soma-poptron https://somafm.com/poptron.pls
+soma-reggae https://somafm.com/reggae.pls
+soma-scanner https://somafm.com/scanner.pls
+sa|soma-secretagent https://somafm.com/secretagent.pls
 soma-sf1033 https://somafm.com/sf1033.pls
+soma-sfinsf130 https://somafm.com/sfinsf.pls
+soma-sonicuniverse https://somafm.com/sonicuniverse.pls
+soma-spacestation https://somafm.com/spacestation.pls
 soma-specials https://somafm.com/specials.pls
-soma-sonicuniverse https://somafm.com/startstream=sonicuniverse.pls
-soma-spacestation https://somafm.com/startstream=spacestation.pls
-soma-suburbsofgoa https://somafm.com/startstream=suburbsofgoa.pls
-soma-tags https://somafm.com/startstream=tags.pls
+soma-suburbsofgoa https://somafm.com/suburbsofgoa.pls
+soma-synphaera https://somafm.com/synphaera.pls
+soma-trip|some-thetrip https://somafm.com/thetrip.pls
 soma-thistle https://somafm.com/thistle.pls
-soma-u80s https://somafm.com/startstream=u80s.pls
-soma-xmasinfrisko https://somafm.com/startstream=xmasinfrisko.pls
-soma-xmasrocks https://somafm.com/startstream=xmasrocks.pls
+soma-tikitime https://somafm.com/tikitime.pls
+soma-u80s https://somafm.com/u80s.pls
+soma-vaporwaves https://somafm.com/vaporwaves.pls
 sst|streaming soundtracks http://www.streamingsoundtracks.com/modules/Listen/MP3-hi.pls
 ctfm|ClubTime.FM http://listen.clubtime.fm/dsl.pls
 wdr2|WDR 2 http://www.wdr.de/wdrlive/media/mp3/wdr2-muensterland.m3u
 htfm|HouseTime.FM http://listen.housetime.fm/dsl.pls
 tbfm|TranceBase.FM http://listen.trancebase.fm/dsl.pls
-Techno.FM Live Channel DIRECT:https://stream.techno.fm/radio1-192k.mp3
+tfm|Techno.FM Live Channel DIRECT:https://stream.techno.fm/radio1-192k.mp3
 ssl|sunshine live DIRECT:https://stream.sunshine-live.de/live/mp3-192
 ssl-ch|sunshine live - Schweiz DIRECT:https://stream.sunshine-live.de/schweiz/mp3-192
 ssl-ecafe|sunshine live - Électrique Café DIRECT:https://stream.sunshine-live.de/electriquecafe/mp3-192
@@ -408,12 +428,11 @@ ssl-blue|sunshine live - Blue DIRECT:https://stream.sunshine-live.de/Blue/mp3-19
 # bitjam DIRECT:OGGDEMUX:http://88.80.10.21:8086/bitjam.ogg
 # cryosleep http://207.200.96.225:8022/listen.pls
 # hardrave.jp http://hardrave.jp:9000/listen.pls
+# nubreaks http://nubreaks.com/modules/mod_internetradio/makeplaylist.php?ip=69.175.103.232&port=8700&format=PLS
 # phish|live Phish radio http://www.livephish.com/radio/listen.m3u
 # rivendell http://www.radiorivendell.com/lib/blocks/rr_play.php?play_f=play&bitrate=128&codec=mp3&player=Winamp
-# ssl|sunshine live http://lsd.newmedia.tiscali-business.com/bb/redirect.lsc?adid=0&content=live&media=mp3&stream=sunshinelive/livestream.mp3
 # subpop OGGDEMUX:DIRECT:http://pushnpop.net:8912/subpop.ogg
 # tt24|Turntables24.com http://stream.turntables24.de:9200/listen.pls
 # r7|radioseven http://www.radioseven.se/128.pls
 # ttfm|Techno.Techno.FM DIRECT:http://stream.techno.fm/techno.256k.mp3
 # ltfm|Live.Techno.FM DIRECT:http://stream.techno.fm/live.256k.mp3
-# soma-doomed https://somafm.com/startstream=doomed.pls
