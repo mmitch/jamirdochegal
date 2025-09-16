@@ -262,6 +262,57 @@ exec $player->{BINARY}, @{$player->{PARAMS}}, @parms, get_url($selected_station)
 #   ALIAS:<alias> <name>
 #   ALIAS:<alias> <shortcut>
 __DATA__
+aby-antenne|ANTENNE BAYERN Live DIRECT:https://stream.antenne.de/antenne/stream/aacp
+aby-2000er-hits|ANTENNE BAYERN 2000er Hits DIRECT:https://stream.antenne.de/2000er-hits/stream/aacp
+aby-2010er-hits|ANTENNE BAYERN 2010er Hits DIRECT:https://stream.antenne.de/2010er-hits/stream/aacp
+aby-70er-hits|ANTENNE BAYERN 70er Hits DIRECT:https://stream.antenne.de/70er-hits/stream/aacp
+aby-antenne-bayern-70er-rock|ANTENNE BAYERN 70er Rock DIRECT:https://stream.antenne.de/antenne-bayern-70er-rock/stream/aacp
+aby-antenne-bayern-80er-disco-hits|ANTENNE BAYERN 80er Disco Hits DIRECT:https://stream.antenne.de/antenne-bayern-80er-disco-hits/stream/aacp
+aby-80er-kulthits|ANTENNE BAYERN 80er Hits DIRECT:https://stream.antenne.de/80er-kulthits/stream/aacp
+aby-antenne-bayern-80er-party|ANTENNE BAYERN 80er Party DIRECT:https://stream.antenne.de/antenne-bayern-80er-party/stream/aacp
+aby-antenne-bayern-80er-rock|ANTENNE BAYERN 80er Rock DIRECT:https://stream.antenne.de/antenne-bayern-80er-rock/stream/aacp
+aby-antenne-bayern-90er-eurodance|ANTENNE BAYERN 90er Eurodance DIRECT:https://stream.antenne.de/antenne-bayern-90er-eurodance/stream/aacp
+aby-90er-hits|ANTENNE BAYERN 90er Hits DIRECT:https://stream.antenne.de/90er-hits/stream/aacp
+aby-antenne-bayern-90er-party|ANTENNE BAYERN 90er Party DIRECT:https://stream.antenne.de/antenne-bayern-90er-party/stream/aacp
+aby-antenne-bayern-90er-rock|ANTENNE BAYERN 90er Rock DIRECT:https://stream.antenne.de/antenne-bayern-90er-rock/stream/aacp
+aby-apres-ski|ANTENNE BAYERN Après Ski DIRECT:https://stream.antenne.de/apres-ski/stream/aacp
+aby-bayerische-weihnacht|ANTENNE BAYERN Bayerische Weihnacht DIRECT:https://stream.antenne.de/bayerische-weihnacht/stream/aacp
+aby-bayern-sound|ANTENNE BAYERN Bayern Sound DIRECT:https://stream.antenne.de/bayern-sound/stream/aacp
+aby-black-beatz|ANTENNE BAYERN Black Music DIRECT:https://stream.antenne.de/black-beatz/stream/aacp
+aby-chillout|ANTENNE BAYERN CHILLOUT ANTENNE DIRECT:https://stream.antenne.de/chillout/stream/aacp
+aby-country-antenne|ANTENNE BAYERN COUNTRY ANTENNE DIRECT:https://stream.antenne.de/country-antenne/stream/aacp
+aby-classic-rock-live|ANTENNE BAYERN Classic Rock DIRECT:https://stream.antenne.de/classic-rock-live/stream/aacp
+aby-coffee|ANTENNE BAYERN Coffee Music DIRECT:https://stream.antenne.de/coffee/stream/aacp
+aby-dance-xxl|ANTENNE BAYERN Dance XXL DIRECT:https://stream.antenne.de/dance-xxl/stream/aacp
+aby-deutsch-pop|ANTENNE BAYERN Deutsch Pop DIRECT:https://stream.antenne.de/deutsch-pop/stream/aacp
+aby-faschings-hits|ANTENNE BAYERN Faschings Hits DIRECT:https://stream.antenne.de/faschings-hits/stream/aacp
+aby-fresh|ANTENNE BAYERN Fresh DIRECT:https://stream.antenne.de/fresh/stream/aacp
+aby-fruehlings-hits|ANTENNE BAYERN Frühlings Hits DIRECT:https://stream.antenne.de/fruehlings-hits/stream/aacp
+aby-greatest-hits|ANTENNE BAYERN Greatest Hits DIRECT:https://stream.antenne.de/greatest-hits/stream/aacp
+aby-event|ANTENNE BAYERN Grill Hits DIRECT:https://stream.antenne.de/event/stream/aacp
+aby-halli-galli-gaudi|ANTENNE BAYERN Halli Galli Gaudi DIRECT:https://stream.antenne.de/halli-galli-gaudi/stream/aacp
+aby-happy-hits|ANTENNE BAYERN Happy Hits DIRECT:https://stream.antenne.de/happy-hits/stream/aacp
+aby-herbst-hits|ANTENNE BAYERN Herbst Hits DIRECT:https://stream.antenne.de/herbst-hits/stream/aacp
+aby-hits-fuer-kids|ANTENNE BAYERN Hits für Kids DIRECT:https://stream.antenne.de/hits-fuer-kids/stream/aacp
+aby-in-the-mix|ANTENNE BAYERN In the mix DIRECT:https://stream.antenne.de/in-the-mix/stream/aacp
+aby-antenne-bayern-italo-hits|ANTENNE BAYERN Italo Hits DIRECT:https://stream.antenne.de/antenne-bayern-italo-hits/stream/aacp
+aby-lounge|ANTENNE BAYERN Lounge DIRECT:https://stream.antenne.de/lounge/stream/aacp
+aby-lovesongs|ANTENNE BAYERN Lovesongs DIRECT:https://stream.antenne.de/lovesongs/stream/aacp
+aby-mallorca-party|ANTENNE BAYERN Mallorca Party DIRECT:https://stream.antenne.de/mallorca-party/stream/aacp
+aby-antenne-bayern-ndw|ANTENNE BAYERN NDW DIRECT:https://stream.antenne.de/antenne-bayern-ndw/stream/aacp
+aby-nur-die-musik|ANTENNE BAYERN Nur die Musik DIRECT:https://stream.antenne.de/nur-die-musik/stream/aacp
+aby-oldie-antenne|ANTENNE BAYERN OLDIE ANTENNE Live - 60er, 70er, 80er DIRECT:https://stream.antenne.de/oldie-antenne/stream/aacp
+aby-oktoberfest-hits|ANTENNE BAYERN Oktoberfest Hits DIRECT:https://stream.antenne.de/oktoberfest-hits/stream/aacp
+aby-party-hits|ANTENNE BAYERN Party Hits DIRECT:https://stream.antenne.de/party-hits/stream/aacp
+aby-pop-xxl|ANTENNE BAYERN Pop XXL DIRECT:https://stream.antenne.de/pop-xxl/stream/aacp
+aby-rockantenne-bayern|ANTENNE BAYERN ROCK ANTENNE Bayern DIRECT:https://stream.antenne.de/rockantenne-bayern/stream/aacp
+aby-relax|ANTENNE BAYERN Relax DIRECT:https://stream.antenne.de/relax/stream/aacp
+aby-das-schlager-karussell|ANTENNE BAYERN Schlagersahne DIRECT:https://stream.antenne.de/das-schlager-karussell/stream/aacp
+aby-sommer-hits|ANTENNE BAYERN Sommer Hits DIRECT:https://stream.antenne.de/sommer-hits/stream/aacp
+aby-top-1000|ANTENNE BAYERN Top 1000 DIRECT:https://stream.antenne.de/top-1000/stream/aacp
+aby-top-40|ANTENNE BAYERN Top 40 DIRECT:https://stream.antenne.de/top-40/stream/aacp
+aby-weihnachts-hits|ANTENNE BAYERN Weihnachtshits DIRECT:https://stream.antenne.de/weihnachts-hits/stream/aacp
+aby-workout-hits|ANTENNE BAYERN Workout Mix DIRECT:https://stream.antenne.de/workout-hits/stream/aacp
 bassdrive http://bassdrive.com/v2/streams/BassDrive.pls
 # Website: https://radio.cvgm.net/demovibes ; this is the UK stream relay:
 cvgm DIRECT:http://radio.chapter3-it.io/cvgm192
